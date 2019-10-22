@@ -1,0 +1,33 @@
+# pysam for fast tabix jumping
+pysam==0.15.3
+
+# VCF reading
+vcfpy
+
+# Easy logging.
+logzero
+
+# HTTP requests, yay!
+pyopenssl
+cryptography
+requests
+
+# Attrs and friends
+attr
+cattrs
+
+# Conversion of file format.t
+bioconvert
+
+# Writing of XLSX files.
+xlsxwriter
+
+# Dash and friends
+dash[testing]
+dash-renderer 
+dash-html-components 
+dash-core-components 
+dash-bootstrap-components
+dash_table 
+plotly
+
