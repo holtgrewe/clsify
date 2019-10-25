@@ -2,10 +2,11 @@
 History
 =======
 
------------------
-HEAD (unreleased)
------------------
+------
+v0.1.1
+------
 
+- Zapping gremlins in haplotype table.
 - Change formatting of README.
 
 ------
