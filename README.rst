@@ -2,7 +2,7 @@
 CLSify
 ======
 
-Classification of *Candidatus Liberibacter solanacearum* following IPPC (International Plant Protection Convention) standard [DP 21: Candidatus Liberibacter solanacearum](https://www.ippc.int/en/publications/84157).
+Classification of *Candidatus Liberibacter solanacearum* following IPPC (International Plant Protection Convention) standard `DP 21: Candidatus Liberibacter solanacearum <https://www.ippc.int/en/publications/84157>`_.
 
 -----------
 Quick Facts
@@ -16,10 +16,10 @@ Input / Output - What it Does!
 ------------------------------
 
 This program takes as the input Sanger sequences from the 16S, 16S-23S, and 50S primers from the IPPC standard DP21.
-It then aligns them to the GenBank reference sequences `EU812559` and `EU834131` (as specified in DP21).
+It then aligns them to the GenBank reference sequences ``EU812559`` and ``EU834131`` (as specified in DP21).
 Based on the alignments and the document DP21, sequence identity is computed and haplotyping is performed, yielding:
 
-- sequence identity to `EU822559` for identifying the species *C. Liberibacter solanacearum*, and
+- sequence identity to ``EU822559`` for identifying the species *C. Liberibacter solanacearum*, and
 - haplotyping of the read based on variation from the reference sequence.
 
 Sample names can be inferred from the read names or from a separate mapping TSV file.
@@ -33,9 +33,9 @@ This is gonna be really quick!
 Installation
 ============
 
-We recommend using [Bioconda](https://bioconda.github.io):
+We recommend using `Bioconda <https://bioconda.github.io>`_.
 
-First [install Bioconda](https://bioconda.github.io/user/install.html#getting-started).
+First `install Bioconda <https://bioconda.github.io/user/install.html#getting-started>`_.
 Then:
 
 .. code-block:: bash
