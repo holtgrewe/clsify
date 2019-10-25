@@ -1,4 +1,4 @@
-.PHONY: default black black-check flake8 test test-v test-vv install serve
+.PHONY: default black black-check flake8 test test-v test-vv install serve sdist twine-test twine-real
 
 default: black-check flake8
 
@@ -25,3 +25,13 @@ install:
 
 serve:
 	clsify web --debug
+
+sdist:
+	rm -rf dist
+	python setup.py sdist
+
+twine-test: sdist
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/clsify-*.tar.gz
+
+twine-real: sdist
+	twine upload dist/clsify-*.tar.gz
