@@ -9,7 +9,7 @@ recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 
 recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
-recursive-include clsify/data *.txt
+recursive-include clsify/data *
 recursive-include clsify/web/assets *.css *.js *.png *.eot *.svg *.ttf *.woff *.woff2 *.zip
 recursive-include clsify/web/static *.md
 

@@ -25,9 +25,8 @@ DEFAULT_PARSE_RE = r"^(?P<sample>[^_]+_[^_]+_[^_]+)_(?P<primer>.*?)\.fasta"
 
 #: The reference files to use.
 REF_FILES = (
-    # TODO: get rid of relpath
-    os.path.relpath(os.path.join(os.path.dirname(__file__), "data", "EU812559.1.fasta")),
-    os.path.relpath(os.path.join(os.path.dirname(__file__), "data", "EU834131.1.fasta")),
+    os.path.join(os.path.dirname(__file__), "data", "EU812559.1.fasta"),
+    os.path.join(os.path.dirname(__file__), "data", "EU834131.1.fasta"),
 )
 
 
@@ -38,7 +37,7 @@ def blast_and_haplotype(path_query, min_identity=DEFAULT_MIN_IDENTITY):
     best_idx = max(range(len(matches)), key=lambda i: matches[i][1].identity)
     best_match = matches[best_idx][1]
     logger.info("Best match is %s", best_match)
-    if best_match.identity >= DEFAULT_MIN_IDENTITY:
+    if best_match.identity >= min_identity:
         haplo_result = run_haplotyping(matches[best_idx][0], [best_match])
         logger.info("Haplotyping is %s", haplo_result)
     else:
