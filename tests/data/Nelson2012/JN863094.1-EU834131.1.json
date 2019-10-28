@@ -1,0 +1,77 @@
+{
+  "BlastOutput2": [
+    {
+      "report": {
+        "program": "blastn",
+        "version": "BLASTN 2.9.0+",
+        "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+        "search_target": {
+          "db": "clsify/data/EU834131.1.fasta"
+        },
+        "params": {
+          "expect": 10,
+          "sc_match": 1,
+          "sc_mismatch": -2,
+          "gap_open": 0,
+          "gap_extend": 0,
+          "filter": "L;m;"
+        },
+        "results": {
+          "search": {
+            "query_id": "Query_1",
+            "query_title": "JN863094.1",
+            "query_len": 668,
+            "query_masking": [
+              {
+                "from": 266,
+                "to": 287
+              }
+            ],
+            "hits": [
+              {
+                "num": 1,
+                "description": [
+                  {
+                    "id": "gnl|BL_ORD_ID|0",
+                    "accession": "0",
+                    "title": "EU834131.1 Candidatus Liberibacter solanacearum isolate NZ082226 50S ribosomal subunit protein L10 (rplJ) and 50S ribosomal subunit protein L12 (rplL) genes, complete cds; and RNA polymerase beta subunit (rpoB) gene, partial cds"
+                  }
+                ],
+                "len": 1714,
+                "hsps": [
+                  {
+                    "num": 1,
+                    "bit_score": 1158.97,
+                    "score": 627,
+                    "evalue": 0,
+                    "identity": 655,
+                    "query_from": 1,
+                    "query_to": 668,
+                    "query_strand": "Plus",
+                    "hit_from": 508,
+                    "hit_to": 1171,
+                    "hit_strand": "Plus",
+                    "align_len": 668,
+                    "gaps": 4,
+                    "qseq": "CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTaaaaaaaactaagataaaaaaaGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG",
+                    "hseq": "CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTC---CTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG",
+                    "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||   |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||| ||||| ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||"
+                  }
+                ]
+              }
+            ],
+            "stat": {
+              "db_num": 1,
+              "db_len": 1714,
+              "hsp_len": 13,
+              "eff_space": 1114155,
+              "kappa": 0.46,
+              "lambda": 1.28,
+              "entropy": 0.85
+            }
+          }
+        }
+      }
+    }
+  ]
+}

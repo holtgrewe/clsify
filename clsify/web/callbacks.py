@@ -13,7 +13,7 @@ from logzero import logger
 import pandas as pd
 
 from ..export import write_excel
-from ..workflow import blast_and_haplotype_many, result_pairs_to_data_frames
+from ..workflow import blast_and_haplotype_many, results_to_data_frames
 from .settings import SAMPLE_REGEX
 
 from . import ui
@@ -35,10 +35,8 @@ def register_upload(app):
                         logger.info("Writing to %s", paths_reads[-1])
                         _, content = content.split(",", 1)
                         tmp_file.write(base64.b64decode(content))
-                result_pairs = blast_and_haplotype_many(paths_reads)
-                df_summary, df_blast, df_haplotyping = result_pairs_to_data_frames(
-                    result_pairs, SAMPLE_REGEX
-                )
+                results = blast_and_haplotype_many(paths_reads)
+                df_summary, df_blast, df_haplotyping = results_to_data_frames(results, SAMPLE_REGEX)
             return json.dumps(
                 {
                     "summary": df_summary.to_dict(),

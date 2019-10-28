@@ -6,7 +6,7 @@ from logzero import logger
 
 from .conversion import convert_seqs
 from .export import write_excel
-from .workflow import blast_and_haplotype_many, result_pairs_to_data_frames
+from .workflow import blast_and_haplotype_many, results_to_data_frames
 
 # from .analysis import convert_seqs, infer_from_file, write_ref
 # from .blast import run_blastn
@@ -31,11 +31,9 @@ def run(parser, args):
         logger.info("Converting sequences (if necessary)...")
         seq_files = convert_seqs(args.seq_files, tmpdir)
         logger.info("Running BLAST and haplotyping...")
-        result_pairs = blast_and_haplotype_many(seq_files)
+        results = blast_and_haplotype_many(seq_files)
         logger.info("Converting results into data frames...")
-        df_summary, df_blast, df_haplotyping = result_pairs_to_data_frames(
-            result_pairs, args.sample_regex
-        )
+        df_summary, df_blast, df_haplotyping = results_to_data_frames(results, args.sample_regex)
         logger.info("Writing XLSX file to %s", args.output)
         write_excel(df_summary, df_blast, df_haplotyping, args.output)
     logger.info("All done. Have a nice day!")

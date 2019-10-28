@@ -2,6 +2,14 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Removing dependency on bcftools.
+  Haplotyping is done from BLAST match now.
+- Adding tests for ``blast`` module.
+
 ------
 v0.1.1
 ------

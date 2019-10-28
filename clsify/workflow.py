@@ -10,6 +10,7 @@ from this with a regexp.
 import os
 import re
 
+import attr
 from logzero import logger
 import pandas as pd
 
@@ -24,43 +25,67 @@ DEFAULT_MIN_IDENTITY = 0.5
 DEFAULT_PARSE_RE = r"^(?P<sample>[^_]+_[^_]+_[^_]+)_(?P<primer>.*?)\.fasta"
 
 #: The reference files to use.
-REF_FILES = (
-    os.path.join(os.path.dirname(__file__), "data", "EU812559.1.fasta"),
-    os.path.join(os.path.dirname(__file__), "data", "EU834131.1.fasta"),
-)
+REF_FILES = {
+    "EU812559.1": os.path.join(os.path.dirname(__file__), "data", "EU812559.1.fasta"),
+    "EU834131.1": os.path.join(os.path.dirname(__file__), "data", "EU834131.1.fasta"),
+}
 
 
-def blast_and_haplotype(path_query, min_identity=DEFAULT_MIN_IDENTITY):
+@attr.s(auto_attribs=True, frozen=True)
+class NamedSequence:
+    """A named sequence."""
+
+    #: the sequence name
+    name: str
+    #: the sequence
+    sequence: str
+
+
+def blast_and_haplotype(path_query):
     """Run BLAST and haplotyping for the one file at ``path_query``."""
     logger.info("Running BLAST on all references for %s...", path_query)
-    matches = [(ref, run_blast(ref, path_query)) for ref in REF_FILES]
+    named_seq = NamedSequence("", "")
+    with open(path_query, "rt") as inputf:
+        line_name = None
+        lines_seq = []
+        for line in inputf:
+            line = line.rstrip()
+            if not line:
+                continue
+            if line.startswith(">"):
+                if line_name is not None:
+                    break
+                else:
+                    line_name = line
+            elif line_name is not None:
+                lines_seq.append(line)
+        named_seq = NamedSequence(
+            line_name[1:].split()[0], "".join([x for x in "".join(lines_seq) if x in "cgatnCGATN"])
+        )
+    matches = [(ref, run_blast(ref, path_query)) for ref in REF_FILES.values()]
     best_idx = max(range(len(matches)), key=lambda i: matches[i][1].identity)
     best_match = matches[best_idx][1]
     logger.info("Best match is %s", best_match)
-    if best_match.identity >= min_identity:
-        haplo_result = run_haplotyping(matches[best_idx][0], [best_match])
-        logger.info("Haplotyping is %s", haplo_result)
-    else:
-        haplo_result = None
-        logger.info("Identity too low, not performing haplotyping (%f)", best_match.identity)
-    return best_match, haplo_result[list(haplo_result.keys())[0]]
+    haplo_result = run_haplotyping(best_match)
+    logger.info("Haplotyping is %s", haplo_result)
+    return named_seq, best_match, haplo_result
 
 
-def blast_and_haplotype_many(paths_query, min_identity=DEFAULT_MIN_IDENTITY):
+def blast_and_haplotype_many(paths_query):
     """Run BLAST and haplotyping for all files at ``paths_query``.
 
     Return list of dicts with keys "best_match" and "haplo_result".
     """
     logger.info("Running BLAST and haplotyping for all queries...")
     result = []
-    for path_query in paths_query:
-        best_match, haplo_result = blast_and_haplotype(path_query, min_identity)
-        result.append({"best_match": best_match, "haplo_result": haplo_result})
+    for path_query in sorted(paths_query):
+        named_seq, best_match, haplo_result = blast_and_haplotype(path_query)
+        result.append({"query": named_seq, "best_match": best_match, "haplo_result": haplo_result})
     return result
 
 
-def result_pairs_to_data_frames(result_pairs, regex, column="query"):
-    """Convert list of dicts with best_match/haplo_result pairs to triple of Pandas DataFrame.
+def results_to_data_frames(results, regex, column="query"):
+    """Convert list of dicts with best_match/haplo_result to triple of Pandas DataFrame.
 
     The three DataFrame will contain the following information:
 
@@ -71,9 +96,10 @@ def result_pairs_to_data_frames(result_pairs, regex, column="query"):
     r_summary = []
     r_blast = []
     r_haplo = []
-    for pair in result_pairs:
-        best_match = pair["best_match"]
-        haplo_result = pair["haplo_result"]
+    for result in results:
+        query = result["query"]
+        best_match = result["best_match"]
+        haplo_result = result["haplo_result"]
 
         r_summary.append(
             {
@@ -85,6 +111,7 @@ def result_pairs_to_data_frames(result_pairs, regex, column="query"):
                     for key, value in haplo_result.asdict().items()
                     if key in ("best_haplotypes", "best_score")
                 },
+                "orig_sequence": query.sequence,
             }
         )
         r_blast.append(
@@ -92,15 +119,16 @@ def result_pairs_to_data_frames(result_pairs, regex, column="query"):
                 "query": best_match.query,
                 "database": best_match.database,
                 "identity": 100.0 * best_match.identity,
-                "query_start": best_match.query_start,
-                "query_end": best_match.query_end,
-                "query_strand": best_match.query_strand,
-                "database_start": best_match.database_start,
-                "database_end": best_match.database_end,
-                "database_strand": best_match.database_strand,
+                "q_start": best_match.query_start,
+                "q_end": best_match.query_end,
+                "q_str": best_match.query_strand,
+                "db_start": best_match.database_start,
+                "db_end": best_match.database_end,
+                "db_str": best_match.database_strand,
                 "alignment": best_match.alignment.wrapped(
-                    best_match.database_start, best_match.database_end
+                    best_match.query_start, best_match.database_start
                 ),
+                "orig_sequence": query.sequence,
             }
         )
         r_haplo.append(
@@ -116,16 +144,16 @@ def result_pairs_to_data_frames(result_pairs, regex, column="query"):
 
     dfs = pd.DataFrame(r_summary), pd.DataFrame(r_blast), pd.DataFrame(r_haplo)
     dfs = list(map(lambda df: match_sample_in_data_frame(df, regex, column), dfs))
-    dfs[0] = augment_summary(dfs[0], result_pairs, regex, column, "sample")
+    dfs[0] = augment_summary(dfs[0], results, regex, column, "sample")
     for df in dfs:
         df.index = range(df.shape[0])
         df.insert(0, "id", df.index)
     return dfs
 
 
-def augment_summary(df, result_pairs, regex, column, group_by):
+def augment_summary(df, results, regex, column, group_by):
     grouped = {}
-    for pair in result_pairs:
+    for pair in results:
         haplo_result = pair["haplo_result"]
         m = re.match(regex, haplo_result.filename)
         if m and m.group(group_by):
@@ -179,7 +207,7 @@ def match_sample_in_data_frame(df, regex, column):
 
 
 if __name__ == "__main__":
-    result_pairs = blast_and_haplotype_many(
+    results = blast_and_haplotype_many(
         [
             "examples/CA_SanJoaquinValley_Tm3_16S_LsoF.fasta",
             "examples/CA_SanJoaquinValley_Tm3_50S_CL514F.fasta",
@@ -187,9 +215,7 @@ if __name__ == "__main__":
             "examples/CA_SanJoaquinValley_Tm4_50S_CL514F.fasta",
         ]
     )
-    df_summary, df_blast, df_haplotyping = result_pairs_to_data_frames(
-        result_pairs, DEFAULT_PARSE_RE
-    )
+    df_summary, df_blast, df_haplotyping = results_to_data_frames(results, DEFAULT_PARSE_RE)
     print(df_summary)
     print(df_blast)
     print(df_haplotyping)

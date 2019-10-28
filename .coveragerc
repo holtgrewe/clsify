@@ -1,0 +1,3 @@
+[run]
+omit =
+    clsify/_version.py

@@ -9,6 +9,9 @@ import sys
 
 from . import cli, web
 
+#: The required executables in PATH.
+REQUIRED_EXECTUABLES = ("blastn",)
+
 
 def main(argv=None):
     """Main entrypoint (before parsing command line arguments)."""
@@ -17,7 +20,7 @@ def main(argv=None):
     cli.add_parser(subparsers)
     web.add_parser(subparsers)
 
-    for prog in ("blastn", "bcftools"):
+    for prog in REQUIRED_EXECTUABLES:
         found_all = True
         try:
             check_output(["which", prog])

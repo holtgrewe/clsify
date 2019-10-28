@@ -20,6 +20,9 @@ from .settings import (
 from ..haplotyping import HAPLOTYPE_NAMES
 from .. import __version__
 
+#: names of columns that are not to be shown
+HIDDEN_COLUMNS = ("alignment", "orig_sequence")
+
 
 def render_navbar():
     """Render the site navbar"""
@@ -185,9 +188,9 @@ def render_tab_summary(session_data):
     )
     table = dash_table.DataTable(
         id="summary-table",
-        columns=[{"name": i, "id": i} for i in df.columns if i != "alignment"],
+        columns=[{"name": i, "id": i} for i in df.columns if i not in HIDDEN_COLUMNS],
         data=[
-            {k: v for k, v in record.items() if k != "alignment"}
+            {k: v for k, v in record.items() if k not in HIDDEN_COLUMNS}
             for record in df.to_dict("records")
         ],
         style_cell=style_cell,
@@ -238,9 +241,9 @@ def render_tab_blast(session_data):
     df.loc[:, "identity"] = df.loc[:, "identity"].map(lambda x: str(round(float(x), 1)))
     table = dash_table.DataTable(
         id="blast-table",
-        columns=[{"name": i, "id": i} for i in df.columns if i != "alignment"],
+        columns=[{"name": i, "id": i} for i in df.columns if i not in HIDDEN_COLUMNS],
         data=[
-            {k: v for k, v in record.items() if k != "alignment"}
+            {k: v for k, v in record.items() if k not in HIDDEN_COLUMNS}
             for record in df.to_dict("records")
         ],
         style_cell=style_cell,

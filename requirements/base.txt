@@ -1,9 +1,3 @@
-# pysam for fast tabix jumping
-pysam==0.15.3
-
-# VCF reading
-vcfpy
-
 # Easy logging.
 logzero
 

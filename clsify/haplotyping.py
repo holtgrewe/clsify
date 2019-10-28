@@ -11,7 +11,8 @@ import typing
 
 import attr
 from logzero import logger
-import vcfpy
+
+from .blast import BlastMatch
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -53,7 +54,7 @@ HAPLOTYPE_TABLE = load_haplotyping_table(
 # logger.debug("haplotype table = %s", HAPLOTYPE_TABLE)
 
 #: The haplotype names
-HAPLOTYPE_NAMES = ("A", "B", "C", "D", "E")
+HAPLOTYPE_NAMES = "ABCDE"
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -88,7 +89,12 @@ class HaplotypingResult:
             informative["%s_neg" % name] = minus
             scores[name] = plus - minus
         best_score = max(scores.values())
-        best_haplotypes = ",".join([key for key, value in scores.items() if value == best_score])
+        if best_score > 0:
+            best_haplotypes = ",".join(
+                [key for key, value in scores.items() if value == best_score]
+            )
+        else:
+            best_haplotypes = "-"
         if only_summary:
             return {"best_haplotypes": best_haplotypes, "best_score": best_score}
         else:
@@ -124,73 +130,17 @@ class HaplotypingResult:
         return HaplotypingResult(filename=dict_["filename"], informative_values=informative_values)
 
 
-def run_bcftools(ref_path, path_sam, tmpdir):
-    """Perform variant calling."""
-    logger.info("running variant calling on SAM file %s", path_sam)
-    cmd_mpileup = (
-        "bcftools",
-        "mpileup",
-        "--fasta-ref",
-        shlex.quote(ref_path),
-        shlex.quote(path_sam),
-    )
-    cmd_call = ("bcftools", "call", "-c", "--ploidy", "1")
-    with subprocess.Popen(cmd_mpileup, stdout=subprocess.PIPE) as mpileup:
-        path_vcf = os.path.join(tmpdir, path_sam + ".vcf")
-        with open(path_vcf, "wb") as vcf_file:
-            with subprocess.Popen(cmd_call, stdin=mpileup.stdout, stdout=vcf_file):
-                pass
-        logger.info("=> VCF file %s", path_vcf)
-    return path_vcf
-
-
-def run_haplotyping(path_ref, blast_matches):
-    """Perform haplotying based on the ``BlastMatch`` objects in ``blast_matches``."""
-    logger.info("Reading reference FAI...")
-    refs = {}
-    with open("%s.fai" % path_ref, "rt") as fai:
-        for line in fai:
-            arr = line.rstrip().split("\t")
-            refs[arr[0]] = {"name": arr[0], "length": int(arr[1])}
-    logger.info("=> %d reference sequences", len(refs))
-
-    logger.info("Performing haplotyping for %d BLAST matches...", len(blast_matches))
-    result = {}
-    with tempfile.TemporaryDirectory() as tmpdir:
-        for match in blast_matches:
-            logger.info("Haplotyping for %s", match.query)
-            # Write out BLAST match as SAM file.
-            path_sam = os.path.join(tmpdir, "tmp.sam")
-            with open(path_sam, "wt") as sam:
-                print("@HD\tVN:1.6\tSO:coordinate", file=sam)
-                for ref in refs.values():
-                    print("@SQ\tSN:%s\tLN:%d" % (ref["name"], ref["length"]), file=sam)
-                if match.is_match:
-                    print("\t".join(match.to_sam_tsv()), file=sam)
-
-            # Perform variant calling.
-            path_vcf = run_bcftools(path_ref, path_sam, tmpdir)
-
-            # Extract sample bases.
-            sample_bases = {}
-            with vcfpy.Reader.from_path(path_vcf) as vcf_file:
-                for record in vcf_file:
-                    key = (record.CHROM, record.POS - 1)
-                    if key in HAPLOTYPE_TABLE:
-                        sample_bases[key] = record.calls[0].gt_bases[0]
-            # Store results.
-            result[match.query] = HaplotypingResult(match.query, sample_bases)
-
-    logger.info("=> done haplotyping")
-    return result
-
-
-if __name__ == "__main__":
-    from .blast import run_blast
-
-    ref = "clsify/data/EU834131.1.fasta"
-    match = run_blast(ref, "examples/CA_SanJoaquinValley_Tm4_16S_LsoF.fasta")
-    # print(match)
-    res = run_haplotyping(ref, [match])
-    # print([r.asdict() for r in res.values()])
-    # print([HaplotypingResult.fromdict(r.asdict()) for r in res.values()])
+def run_haplotyping(match: BlastMatch) -> HaplotypingResult:
+    """Perform the haplotyping based on the match."""
+    ref = match.database
+    pos = match.database_start
+    informative_values = {}
+    for c in match.alignment.hseq:
+        if c in "ACGTacgt":
+            if (ref, pos) in HAPLOTYPE_TABLE:
+                # logger.info("%s, %s = %s", ref, pos, c)
+                informative_values[(ref, pos)] = c
+            pos += 1
+        else:
+            assert c == "-", "Invalid hseq character '%s'" % c
+    return HaplotypingResult(filename=match.query, informative_values=informative_values)
