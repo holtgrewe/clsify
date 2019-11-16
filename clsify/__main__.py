@@ -7,7 +7,7 @@ import argparse
 from subprocess import check_output, CalledProcessError
 import sys
 
-from . import cli, web
+from . import cli, web, paste
 
 #: The required executables in PATH.
 REQUIRED_EXECTUABLES = ("blastn",)
@@ -19,6 +19,7 @@ def main(argv=None):
     subparsers = parser.add_subparsers()
     cli.add_parser(subparsers)
     web.add_parser(subparsers)
+    paste.add_parser(subparsers)
 
     for prog in REQUIRED_EXECTUABLES:
         found_all = True

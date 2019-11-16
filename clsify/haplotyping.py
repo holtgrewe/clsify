@@ -34,6 +34,8 @@ def load_haplotyping_table(path: str) -> typing.Dict[typing.Tuple[str, int], Hap
     header = None
     with open(path, "rt") as inputf:
         for line in inputf:
+            if line.startswith("#"):
+                continue
             arr = line.rstrip().split("\t")
             if not header:
                 header = arr
@@ -130,17 +132,31 @@ class HaplotypingResult:
         return HaplotypingResult(filename=dict_["filename"], informative_values=informative_values)
 
 
-def run_haplotyping(match: BlastMatch) -> HaplotypingResult:
+def run_haplotyping(matches: typing.List[BlastMatch]) -> typing.List[HaplotypingResult]:
     """Perform the haplotyping based on the match."""
-    ref = match.database
-    pos = match.database_start
-    informative_values = {}
-    for c in match.alignment.hseq:
-        if c in "ACGTacgt":
-            if (ref, pos) in HAPLOTYPE_TABLE:
-                # logger.info("%s, %s = %s", ref, pos, c)
-                informative_values[(ref, pos)] = c
-            pos += 1
+    results_match = {}
+    results_haplo = {}
+
+    for match in matches:
+        ref = match.database
+        if "_" in ref:
+            ref = ref.split("_")[0]
+        pos = match.database_start
+        informative_values = {}
+        for h, q in zip(match.alignment.hseq, match.alignment.qseq):
+            if h in "ACGTacgt":
+                if (ref, pos) in HAPLOTYPE_TABLE:
+                    informative_values[(ref, pos)] = q.upper()
+                pos += 1
+            else:
+                assert h == "-", "Invalid hseq character '%s'" % h
+
+        result = HaplotypingResult(filename=match.query, informative_values=informative_values)
+        if result.filename in results_haplo:
+            results_match[result.filename].append(match)
+            results_haplo[result.filename] = results_haplo[result.filename].merge(result)
         else:
-            assert c == "-", "Invalid hseq character '%s'" % c
-    return HaplotypingResult(filename=match.query, informative_values=informative_values)
+            results_match[result.filename] = [match]
+            results_haplo[result.filename] = result
+
+    return results_match, results_haplo

@@ -36,41 +36,17 @@ def test_haplotyping():
     """Test haplotyping for all samples."""
     samples_seen = set()
     samples_haplotyped = set()
-    bad = []
-    for ref in workflow.REF_FILES:
-        for record in SAMPLES:
-            path_json = os.path.join(
-                PATH_DATA, record["folder"], "%s-%s.json" % (record["accession"], ref)
-            )
-            with open(path_json, "rt") as inputf:
-                str_json = inputf.read()
-            match = blast.parse_blastn_json(ref, "%s.fa" % record["accession"], str_json)
-            haplo_result = haplotyping.run_haplotyping(match)
-            res = haplo_result.asdict()
-            samples_seen.add(record["accession"])
-            if res["best_haplotypes"] != "-":
-                samples_haplotyped.add(record["accession"])
-                assert record["haplotype"] in res["best_haplotypes"], record["accession"]
+    for record in SAMPLES:
+        path_json = os.path.join(PATH_DATA, record["folder"], "%s.json" % record["accession"])
+        with open(path_json, "rt") as inputf:
+            str_json = inputf.read()
+        matches = blast.parse_blastn_json(str_json)
+        haplo_results = haplotyping.run_haplotyping(matches)
+        assert len(haplo_results) == 1
+        haplo_result = list(haplo_results.values())[0]
+        res = haplo_result.asdict()
+        samples_seen.add(record["accession"])
+        if res["best_haplotypes"] != "-":
+            samples_haplotyped.add(record["accession"])
+            assert record["haplotype"] in res["best_haplotypes"], record["accession"]
     assert samples_seen == samples_haplotyped
-
-
-def test_haplotyping_result():
-    results = []
-    for ref in workflow.REF_FILES:
-        for accession in ["EU812559.1", "EU834131.1"]:
-            path_json = os.path.join(
-                PATH_DATA, "Nelson2012", "%s-%s.json" % (accession, ref)
-            )
-            with open(path_json, "rt") as inputf:
-                str_json = inputf.read()
-            match = blast.parse_blastn_json(ref, "%s.fa" % accession, str_json)
-            haplo_result = haplotyping.run_haplotyping(match)
-            assert len(haplo_result.asdict()) > 2
-            assert len(haplo_result.asdict(only_summary=True)) == 2
-            results.append(haplo_result)
-    merged = results[0].merge(results[3])
-    assert results[0].asdict(True) == {'best_haplotypes': 'A,C', 'best_score': 14}
-    assert results[1].asdict(True) == {'best_haplotypes': '-', 'best_score': 0}
-    assert results[2].asdict(True) == {'best_haplotypes': '-', 'best_score': 0}
-    assert results[3].asdict(True) == {'best_haplotypes': 'A', 'best_score': 14}
-    assert merged.asdict(True) == {'best_haplotypes': 'A', 'best_score': 28}

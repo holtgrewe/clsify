@@ -56,48 +56,24 @@ def test_match_cigar():
 
 def test_parse_blastn_json_haplotype_a_16s():
     """Parse ``blastn`` results from Haplotype A specimen for 16S/23S sequence."""
-    query = "EU812559.1"
-    subject = "EU812559.1"
-    path_json = os.path.join(PATH_NELSON, "%s-%s.json" % (query, subject))
+    path_json = os.path.join(PATH_NELSON, "EU812559.1.json")
     with open(path_json, "rt") as inputf:
         match_json = inputf.read()
-    match = blast.parse_blastn_json("%s.fasta" % query, subject, match_json)
 
-    assert match
-    assert match.query == query
-    assert match.database == subject
-    assert match.match_cigar == "2515M"
+    matches = blast.parse_blastn_json(match_json)
 
+    assert matches[0].query == "EU812559.1"
+    assert matches[0].database.endswith("/16S-23S")
+    assert matches[0].match_cigar == "1225H1290M"
 
-def test_parse_blastn_json_haplotype_a_16s_nomatch():
-    """Parse ``blastn`` results with no match (database was 50S sequence)."""
-    query = "EU812559.1"
-    subject = "EU834131.1"
-    path_json = os.path.join(PATH_NELSON, "%s-%s.json" % (query, subject))
-    with open(path_json, "rt") as inputf:
-        match_json = inputf.read()
-    match = blast.parse_blastn_json("%s.fasta" % query, subject, match_json)
-
-    assert match
-
-
-def test_parse_blastn_json_haplotype_a_50s():
-    """Parse ``blastn`` results from Haplotype A specimen for 50S sequence."""
-    query = "EU834131.1"
-    subject = "EU834131.1"
-    path_json = os.path.join(PATH_NELSON, "%s-%s.json" % (query, subject))
-    with open(path_json, "rt") as inputf:
-        match_json = inputf.read()
-    match = blast.parse_blastn_json("%s.fasta" % query, subject, match_json)
-
-    assert match
-    assert match.query == query
-    assert match.database == subject
-    assert match.match_cigar == "1714M"
+    assert matches[1].query == "EU812559.1"
+    assert matches[1].database.endswith("/16S")
+    assert matches[1].match_cigar == "1225M1290H"
 
 
 def test_run_blast():
     """Parse ``blastn`` results from Haplotype A specimen for 50S sequence."""
-    ref_files = list(workflow.REF_FILES.values())
-    result = blast.run_blast(ref_files[0], os.path.join(PATH_NELSON, "EU812559.1.fa"))
-    assert result
+    result = blast.run_blast(workflow.REF_FILE, os.path.join(PATH_NELSON, "EU812559.1.fa"))
+    assert len(result) == 2
+    assert result[0].database.endswith("/16S-23S")
+    assert result[1].database.endswith("/16S")

@@ -8,3 +8,12 @@ The data accession numbers were obtained from the following sources:
   https://doi.org/10.1007/s10658-012-0121-3
 
 The table fit the information regarding the data can be found in `samples.tsv`.
+
+```bash
+REF=../../clsify/data/ref_seqs.fasta 
+for f in Nelson2012/*.fa; do
+  blastn -db $REF -query $f -outfmt 15 \
+  | jq \
+  > ${f%.fa}.json
+done
+```

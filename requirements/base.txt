@@ -10,8 +10,11 @@ requests
 attr
 cattrs
 
-# Conversion of file format.t
+# Conversion of file formats.
 bioconvert
+
+# Phylogenetic computing.
+dendropy ==4.4.0
 
 # Writing of XLSX files.
 xlsxwriter
@@ -24,4 +27,3 @@ dash-core-components
 dash-bootstrap-components
 dash_table 
 plotly
-

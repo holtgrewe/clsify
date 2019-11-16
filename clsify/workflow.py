@@ -25,10 +25,7 @@ DEFAULT_MIN_IDENTITY = 0.5
 DEFAULT_PARSE_RE = r"^(?P<sample>[^_]+_[^_]+_[^_]+)_(?P<primer>.*?)\.fasta"
 
 #: The reference files to use.
-REF_FILES = {
-    "EU812559.1": os.path.join(os.path.dirname(__file__), "data", "EU812559.1.fasta"),
-    "EU834131.1": os.path.join(os.path.dirname(__file__), "data", "EU834131.1.fasta"),
-}
+REF_FILE = os.path.join(os.path.dirname(__file__), "data", "ref_seqs.fasta")
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -44,7 +41,6 @@ class NamedSequence:
 def blast_and_haplotype(path_query):
     """Run BLAST and haplotyping for the one file at ``path_query``."""
     logger.info("Running BLAST on all references for %s...", path_query)
-    named_seq = NamedSequence("", "")
     with open(path_query, "rt") as inputf:
         line_name = None
         lines_seq = []
@@ -59,16 +55,9 @@ def blast_and_haplotype(path_query):
                     line_name = line
             elif line_name is not None:
                 lines_seq.append(line)
-        named_seq = NamedSequence(
-            line_name[1:].split()[0], "".join([x for x in "".join(lines_seq) if x in "cgatnCGATN"])
-        )
-    matches = [(ref, run_blast(ref, path_query)) for ref in REF_FILES.values()]
-    best_idx = max(range(len(matches)), key=lambda i: matches[i][1].identity)
-    best_match = matches[best_idx][1]
-    logger.info("Best match is %s", best_match)
-    haplo_result = run_haplotyping(best_match)
-    logger.info("Haplotyping is %s", haplo_result)
-    return named_seq, best_match, haplo_result
+    matches = run_blast(REF_FILE, path_query)
+    haplo_result = run_haplotyping(matches)
+    return matches, haplo_result
 
 
 def blast_and_haplotype_many(paths_query):
@@ -79,8 +68,8 @@ def blast_and_haplotype_many(paths_query):
     logger.info("Running BLAST and haplotyping for all queries...")
     result = []
     for path_query in sorted(paths_query):
-        named_seq, best_match, haplo_result = blast_and_haplotype(path_query)
-        result.append({"query": named_seq, "best_match": best_match, "haplo_result": haplo_result})
+        matches, haplo_result = blast_and_haplotype(path_query)
+        result.append({"matches": matches, "haplo_result": haplo_result})
     return result
 
 

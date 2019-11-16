@@ -132,15 +132,14 @@ def match_cigar(qseq, hseq, query_start, query_end, query_len):
     return match_cigar
 
 
-def parse_blastn_json(database, query, match_json):
+def parse_blastn_json(blastn_json):
     """Parse BLASTN output in JSON format and return ``BlastMatch``."""
-    match_dict = json.loads(match_json)
+    match_dict = json.loads(blastn_json)
     search = match_dict["BlastOutput2"][0]["report"]["results"]["search"]
     hits = search["hits"]
-    if not hits:
-        return BlastMatch.build_nomatch(os.path.basename(query), match_json)
-    else:
-        hsp = hits[0]["hsps"][0]
+    result = []
+    for hit in hits:
+        hsp = hit["hsps"][0]
         qseq = "".join(filter(lambda x: x in "ACGTNacgtn", hsp["qseq"]))
         hseq = "".join(filter(lambda x: x in "ACGTNacgtn", hsp["hseq"]))
         db_strand = "+" if hsp["hit_strand"] == "Plus" else "-"
@@ -157,26 +156,29 @@ def parse_blastn_json(database, query, match_json):
             hseq = revcomp(hseq)
             alignment = alignment.revcomp()
         cigar = match_cigar(qseq, hseq, query_start, query_end, search["query_len"])
-        return BlastMatch(
-            query=os.path.basename(query),
-            database=hits[0]["description"][0]["title"].split()[0],
-            identity=hsp["identity"] / hsp["align_len"],
-            query_strand=query_strand,
-            query_start=query_start,
-            query_end=query_end,
-            database_strand=db_strand,
-            database_start=db_start,
-            database_end=max(hsp["hit_from"], hsp["hit_to"]),
-            match_cigar="".join(["".join(map(str, x)) for x in cigar]),
-            match_seq="".join([x for x in filter(is_nucl, qseq)]),
-            alignment=alignment,
-            match_json=match_json,
+        result.append(
+            BlastMatch(
+                query=search["query_title"],
+                database=hit["description"][0]["title"].split()[0],
+                identity=hsp["identity"] / hsp["align_len"],
+                query_strand=query_strand,
+                query_start=query_start,
+                query_end=query_end,
+                database_strand=db_strand,
+                database_start=db_start,
+                database_end=max(hsp["hit_from"], hsp["hit_to"]),
+                match_cigar="".join(["".join(map(str, x)) for x in cigar]),
+                match_seq="".join([x for x in filter(is_nucl, qseq)]),
+                alignment=alignment,
+                match_json=blastn_json,
+            )
         )
+    return result
 
 
 def run_blast(database, query):
     """Run blastn on FASTA query ``query`` to database sequence at ``database``."""
     cmd = ("blastn", "-db", shlex.quote(database), "-query", shlex.quote(query), "-outfmt", "15")
     logger.info("Executing %s", repr(" ".join(cmd)))
-    match_json = subprocess.check_output(cmd).decode("utf-8")
-    return parse_blastn_json(database, query, match_json)
+    blastn_json = subprocess.check_output(cmd).decode("utf-8")
+    return parse_blastn_json(blastn_json)
