@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastn</BlastOutput_program>
+  <BlastOutput_version>BLASTN 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), &quot;A greedy algorithm for aligning DNA sequences&quot;, J Comput Biol 2000; 7(1-2):203-14.</BlastOutput_reference>
+  <BlastOutput_db>nt_v5</BlastOutput_db>
+  <BlastOutput_query-ID>Query_40609</BlastOutput_query-ID>
+  <BlastOutput_query-def>FJ498807.1 Candidatus Liberibacter sp. Saltillo 9-08 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</BlastOutput_query-def>
+  <BlastOutput_query-len>669</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_sc-match>1</Parameters_sc-match>
+      <Parameters_sc-mismatch>-2</Parameters_sc-mismatch>
+      <Parameters_gap-open>0</Parameters_gap-open>
+      <Parameters_gap-extend>0</Parameters_gap-extend>
+      <Parameters_filter>L;m;</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_40609</Iteration_query-ID>
+  <Iteration_query-def>FJ498807.1 Candidatus Liberibacter sp. Saltillo 9-08 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Iteration_query-def>
+  <Iteration_query-len>669</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|218683248|gb|FJ498807.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter sp. Saltillo 9-08 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|269838639|gb|GU169328.1| Candidatus Liberibacter solanacearum isolate 4ZCTomatoFrench Texas 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|334191642|gb|JF811599.1| Candidatus Liberibacter solanacearum isolate MX11-05 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>FJ498807</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1236.53</Hsp_bit-score>
+      <Hsp_score>669</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>669</Hsp_identity>
+      <Hsp_positive>669</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|289546828|gb|FJ914618.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain Garden-City-KS-5 protein chain elongation factor EF-Tu gene, partial cds; transcription antitermination protein NusG, 50S ribosomal subunit protein L11, 50S ribosomal protein L1, 50S ribosomal subunit protein L10, and 50S ribosomal subunit protein L12 genes, complete cds; and DNA-directed RNA polymerase subunit beta gene, partial cds</Hit_def>
+  <Hit_accession>FJ914618</Hit_accession>
+  <Hit_len>5283</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1230.99</Hsp_bit-score>
+      <Hsp_score>666</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>2959</Hsp_hit-from>
+      <Hsp_hit-to>3627</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>668</Hsp_identity>
+      <Hsp_positive>668</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCAGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|313495152|gb|CP002371.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum CLso-ZC1, complete genome</Hit_def>
+  <Hit_accession>CP002371</Hit_accession>
+  <Hit_len>1258278</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1230.99</Hsp_bit-score>
+      <Hsp_score>666</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1071588</Hsp_hit-from>
+      <Hsp_hit-to>1070920</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>668</Hsp_identity>
+      <Hsp_positive>668</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCAGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|218683244|gb|FJ498805.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter sp. Burns 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>FJ498805</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1230.99</Hsp_bit-score>
+      <Hsp_score>666</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>668</Hsp_identity>
+      <Hsp_positive>668</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAGGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|334191639|gb|JF811598.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate MX11-02 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>JF811598</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1225.45</Hsp_bit-score>
+      <Hsp_score>663</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>667</Hsp_identity>
+      <Hsp_positive>667</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCCTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAGAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|1377542912|gb|MF041969.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate CA_SanJoaquinValley_SJV120 RplL (rplL) and RplJ (rplJ) genes, partial cds</Hit_def>
+  <Hit_accession>MF041969</Hit_accession>
+  <Hit_len>644</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1179.28</Hsp_bit-score>
+      <Hsp_score>638</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>656</Hsp_query-to>
+      <Hsp_hit-from>644</Hsp_hit-from>
+      <Hsp_hit-to>1</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>642</Hsp_identity>
+      <Hsp_positive>642</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>644</Hsp_align-len>
+      <Hsp_qseq>GGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGC</Hsp_qseq>
+      <Hsp_hseq>GGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTCGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCCATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGC</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|1621569630|gb|MH843710.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate AB171 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds</Hit_def>
+  <Hit_accession>MH843710</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1170.05</Hsp_bit-score>
+      <Hsp_score>633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|1377542918|gb|MF041971.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate CA_SanJoaquinValley_Psyllid_nimphs_Tm4 RplL (rplL) and RplJ (rplJ) genes, partial cds</Hit_def>
+  <Hit_accession>MF041971</Hit_accession>
+  <Hit_len>671</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1170.05</Hsp_bit-score>
+      <Hsp_score>633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>670</Hsp_hit-from>
+      <Hsp_hit-to>2</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|1179870295|gb|KY777461.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum haplotype E 50S ribosomal protein L10 (rplJ) gene, partial cds; and 50S ribosomal protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>KY777461</Hit_accession>
+  <Hit_len>686</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1170.05</Hsp_bit-score>
+      <Hsp_score>633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>672</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|218683240|gb|FJ498803.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter sp. CA DP-1 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|247797364|gb|FJ957894.1| Candidatus Liberibacter solanacearum 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|247797367|gb|FJ957895.1| Candidatus Liberibacter solanacearum 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|404279535|gb|JX624240.1| Candidatus Liberibacter solanacearum clone OR-psyllids-1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404279538|gb|JX624241.1| Candidatus Liberibacter solanacearum clone WA-psyllids-1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404279541|gb|JX624242.1| Candidatus Liberibacter solanacearum clone ID-ZC potato-1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404279544|gb|JX624244.1| Candidatus Liberibacter solanacearum clone WA-ZC potato-1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404313036|gb|JX624243.1| Candidatus Liberibacter solanacearum clone OR-ZC potato-1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds</Hit_def>
+  <Hit_accession>FJ498803</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1170.05</Hsp_bit-score>
+      <Hsp_score>633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|194293713|gb|EU834131.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate NZ082226 50S ribosomal subunit protein L10 (rplJ) and 50S ribosomal subunit protein L12 (rplL) genes, complete cds; and RNA polymerase beta subunit (rpoB) gene, partial cds</Hit_def>
+  <Hit_accession>EU834131</Hit_accession>
+  <Hit_len>1714</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1170.05</Hsp_bit-score>
+      <Hsp_score>633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>508</Hsp_hit-from>
+      <Hsp_hit-to>1176</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|1495353888|gb|MH259700.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone 45.13 50S ribosomal subunit protein L10 (rplJ) and 50S ribosomal subunit protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MH259700</Hit_accession>
+  <Hit_len>671</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1166.36</Hsp_bit-score>
+      <Hsp_score>631</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>671</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>659</Hsp_identity>
+      <Hsp_positive>659</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>672</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCC---TGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCGTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTAAGACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCCACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAGTCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATGAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||| | |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||| |||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|1399240053|gb|MF511188.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone IVIA_5324 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MF511188</Hit_accession>
+  <Hit_len>769</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1164.51</Hsp_bit-score>
+      <Hsp_score>630</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>712</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|1399240050|gb|MF511187.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone IVIA_5323 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MF511187</Hit_accession>
+  <Hit_len>769</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1164.51</Hsp_bit-score>
+      <Hsp_score>630</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>712</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|1399240047|gb|MF511186.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone IVIA_5322 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MF511186</Hit_accession>
+  <Hit_len>755</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1164.51</Hsp_bit-score>
+      <Hsp_score>630</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>706</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|1399240044|gb|MF511185.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone IVIA_5321 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MF511185</Hit_accession>
+  <Hit_len>824</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1164.51</Hsp_bit-score>
+      <Hsp_score>630</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>97</Hsp_hit-from>
+      <Hsp_hit-to>766</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>657</Hsp_identity>
+      <Hsp_positive>657</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|1512459658|gb|MG911716.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 3283 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MG911716</Hit_accession>
+  <Hit_len>881</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1160.82</Hsp_bit-score>
+      <Hsp_score>628</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>667</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>705</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>655</Hsp_identity>
+      <Hsp_positive>655</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>668</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|523795257|gb|KF357912.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 12/257 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>KF357912</Hit_accession>
+  <Hit_len>672</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1158.97</Hsp_bit-score>
+      <Hsp_score>627</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>671</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>656</Hsp_identity>
+      <Hsp_positive>656</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|358076391|gb|JN863093.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate B6 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|358076394|gb|JN863094.1| Candidatus Liberibacter solanacearum isolate B9 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|358076400|gb|JN863098.1| Candidatus Liberibacter solanacearum isolate Carrot B1 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404436145|gb|JX280520.1| Candidatus Liberibacter solanacearum isolate 3 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404436148|gb|JX280521.1| Candidatus Liberibacter solanacearum isolate 12 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds &gt;gi|404436151|gb|JX280522.1| Candidatus Liberibacter solanacearum isolate 21 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds</Hit_def>
+  <Hit_accession>JN863093</Hit_accession>
+  <Hit_len>668</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1153.43</Hsp_bit-score>
+      <Hsp_score>624</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>664</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>668</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>654</Hsp_identity>
+      <Hsp_positive>654</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>668</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|1512459655|gb|MG911715.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 6949 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MG911715</Hit_accession>
+  <Hit_len>881</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1147.89</Hsp_bit-score>
+      <Hsp_score>621</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>707</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>654</Hsp_identity>
+      <Hsp_positive>654</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|1512459652|gb|MG911714.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 5749 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit L12 (rplL) gene, complete cds &gt;gi|1534263161|gb|MH061378.1| Candidatus Liberibacter solanacearum isolate 3282 50S ribosomal subunit protein L10 (rplJ) gene, partial cds; and 50S ribosomal subunit L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>MG911714</Hit_accession>
+  <Hit_len>881</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1147.89</Hsp_bit-score>
+      <Hsp_score>621</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>707</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>654</Hsp_identity>
+      <Hsp_positive>654</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|1179870292|gb|KY753132.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum haplotype D 50S ribosomal subunit L10 (rplJ) gene, partial cds; and 50S ribosomal subunit L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>KY753132</Hit_accession>
+  <Hit_len>800</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1147.89</Hsp_bit-score>
+      <Hsp_score>621</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>669</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>761</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>654</Hsp_identity>
+      <Hsp_positive>654</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGATATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|284444291|gb|GU373050.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum 50S ribosomal protein L10 (rplJ) gene, partial cds; and truncated 50S ribosomal protein L12 (rplL) gene, complete cds &gt;gi|284444294|gb|GU373051.1| Candidatus Liberibacter solanacearum 50S ribosomal protein L10 (rplJ) gene, partial cds; and truncated 50S ribosomal protein L12 (rplL) gene, complete cds</Hit_def>
+  <Hit_accession>GU373050</Hit_accession>
+  <Hit_len>669</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1147.89</Hsp_bit-score>
+      <Hsp_score>621</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>664</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>654</Hsp_identity>
+      <Hsp_positive>654</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>669</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGG-CGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || ||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|1179870298|gb|KY777462.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum haplotype D 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>KY777462</Hit_accession>
+  <Hit_len>704</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1144.2</Hsp_bit-score>
+      <Hsp_score>619</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>664</Hsp_query-to>
+      <Hsp_hit-from>41</Hsp_hit-from>
+      <Hsp_hit-to>704</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>649</Hsp_identity>
+      <Hsp_positive>649</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>664</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|404279527|gb|JX308305.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum clone 36 50S ribosomal protein L10 and 50S ribosomal protein L12 genes, partial cds</Hit_def>
+  <Hit_accession>JX308305</Hit_accession>
+  <Hit_len>665</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1144.2</Hsp_bit-score>
+      <Hsp_score>619</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>664</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>665</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>650</Hsp_identity>
+      <Hsp_positive>650</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>665</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|1376496317|gb|MG657027.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum haplotype D 50S ribosomal subunit protein L10 (rplJ) and 50S ribosomal subunit protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG657027</Hit_accession>
+  <Hit_len>666</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1140.5</Hsp_bit-score>
+      <Hsp_score>617</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>665</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>666</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>650</Hsp_identity>
+      <Hsp_positive>650</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>666</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGATAGA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGATAGA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|1377542915|gb|MF041970.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate CA_SanJoaquinValley_Psyllid_nimphs_Tm3 RplL (rplL) and RplJ (rplJ) genes, partial cds</Hit_def>
+  <Hit_accession>MF041970</Hit_accession>
+  <Hit_len>645</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1125.73</Hsp_bit-score>
+      <Hsp_score>609</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>11</Hsp_query-from>
+      <Hsp_query-to>655</Hsp_query-to>
+      <Hsp_hit-from>645</Hsp_hit-from>
+      <Hsp_hit-to>1</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>633</Hsp_identity>
+      <Hsp_positive>633</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>645</Hsp_align-len>
+      <Hsp_qseq>TCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTG</Hsp_qseq>
+      <Hsp_hseq>TCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|1215707561|gb|KX434608.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain LsoBt01 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>KX434608</Hit_accession>
+  <Hit_len>658</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1123.88</Hsp_bit-score>
+      <Hsp_score>608</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>656</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>658</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>641</Hsp_identity>
+      <Hsp_positive>641</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>657</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGC</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGC</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|256427008|gb|GQ381294.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter psyllaurous 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>GQ381294</Hit_accession>
+  <Hit_len>643</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1122.04</Hsp_bit-score>
+      <Hsp_score>607</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>656</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>643</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>631</Hsp_identity>
+      <Hsp_positive>631</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>643</Hsp_align-len>
+      <Hsp_qseq>GTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGC</Hsp_qseq>
+      <Hsp_hseq>GTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCTTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTTTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGGGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGC</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||| |||||||||||||||||||| ||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|1215707564|gb|KX434609.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain LsoBt02 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>KX434609</Hit_accession>
+  <Hit_len>664</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1114.65</Hsp_bit-score>
+      <Hsp_score>603</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>661</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>663</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>641</Hsp_identity>
+      <Hsp_positive>641</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>662</Hsp_align-len>
+      <Hsp_qseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAACGA</Hsp_qseq>
+      <Hsp_hseq>CTCTAAGATTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTKKRRAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTRTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAACGA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||    ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| ||||||||| |||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|354514972|gb|HQ454321.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 84-10 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>HQ454321</Hit_accession>
+  <Hit_len>653</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1114.65</Hsp_bit-score>
+      <Hsp_score>603</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>659</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>652</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>636</Hsp_identity>
+      <Hsp_positive>636</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>652</Hsp_align-len>
+      <Hsp_qseq>TTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTGCTGGTGCAAC</Hsp_qseq>
+      <Hsp_hseq>TTTCGGTTGGTTTTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCGAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACGCCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATAGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCTAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTGCTGGTGCAAC</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||| ||||||||||| |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|1373509991|gb|MG701029.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-26(N1) 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701029</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|1373509988|gb|MG701028.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-7(N3) 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701028</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|1373509985|gb|MG701027.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 15-125 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701027</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|1373509982|gb|MG701026.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 15-122 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701026</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|1373509979|gb|MG701025.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 15-129 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701025</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|1373509973|gb|MG701023.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain FI 15-108 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701023</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGTAGCAACAGAAAGTGTTGCTGTTTCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGTGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || |||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|1185654980|gb|KY619986.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 15208014 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds</Hit_def>
+  <Hit_accession>KY619986</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|1185654974|gb|KY619984.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 15208017 50S ribosomal protein L10 (rp1J) and 50S ribosomal protein L12 (rp1L) genes, partial cds</Hit_def>
+  <Hit_accession>KY619984</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|1114673841|gb|KX752583.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 5505002 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|1114673844|gb|KX752584.1| Candidatus Liberibacter solanacearum isolate 5507001 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|1114674103|gb|KX752585.1| Candidatus Liberibacter solanacearum isolate Johnsons 1 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds &gt;gi|1114674106|gb|KX752586.1| Candidatus Liberibacter solanacearum isolate Johnsons 2 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>KX752583</Hit_accession>
+  <Hit_len>630</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1090.64</Hsp_bit-score>
+      <Hsp_score>590</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>630</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>617</Hsp_identity>
+      <Hsp_positive>617</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>630</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGTTGCTTGAAACACCTCAGAATCAGATTGTTCGTATTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTCACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCGATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||| | |||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|1373510066|gb|MG701054.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-857 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701054</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|1373510063|gb|MG701053.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 15-196 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701053</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|1373510060|gb|MG701052.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 15-165 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701052</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|1373510057|gb|MG701051.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 13-544A 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701051</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|1373510054|gb|MG701050.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 12-96 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701050</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|1373510051|gb|MG701049.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 13-355 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701049</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|1373510048|gb|MG701048.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 12-230 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701048</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|1373510045|gb|MG701047.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-5 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701047</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|1373510042|gb|MG701046.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-2 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701046</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|1373510039|gb|MG701045.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum strain 16-1 50S ribosomal protein L10 (rplJ) and 50S ribosomal protein L12 (rplL) genes, partial cds</Hit_def>
+  <Hit_accession>MG701045</Hit_accession>
+  <Hit_len>633</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1088.8</Hsp_bit-score>
+      <Hsp_score>589</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>619</Hsp_identity>
+      <Hsp_positive>619</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATGCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGCTCTGGTATTTTAAGTGCTATTCAGTCCACTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCATATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGT-AAAAAAACTAAAATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGC---TGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTGCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACAGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAGTTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGAGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAAAAGCTTGAAGCTG</Hsp_qseq>
+      <Hsp_hseq>TTGCTAATGATAACAGTCAATTTGAGATTCTTGGTGGAATTTTGGAAAAAGATATCCTTACCCAAGATTCAATCAAGAAAATTGCTTCCTTGCCAAATATTGAGGAAATTCGTTCTGGTATTTTAAGTGCTATTCAGTCCAGTGCAACTAGATTGGTTATGCTTCTTGAAACACCTCAGAATCAGATTGTTCGTGTTCTTTCTGCTTTTGAGGAGAAGAATCGGCAAGATTAGTTCTGTTAATTGTAAAAAAAACTAAGATAAAAAAAGGAAATGTGTAATATGTCCAATATTGAATCAATTGTTGAACAATTGTCGTCTCTTACTCTTATTCAAGCTGCAGAGCTTTCGAAGAAATTAGAAGAAAAATGGGGTGTTTCTGCCTCTGCTCCTGCTGTTGCTGTATCGGCTTCCGCAGCAACAGAAAGTGTTTCTGTTGCTGAAAAGACTGAATTTGATGTTGTGTTAACGGGTTTTAATGCTACGAGCAAAATCAATGTTATTAAGGAAGTACGTGCAATCACTAATTTAGGTCTCAAAGAAGCCAAAGAGCTTGTGGAAAGTTCTCCAAAGAGCTTAAAAGGGGGCGTTTCTAAGGGAGATGCTGAAGAAATAAAGAAGAAGCTTGAAGCTG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||   |||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>57082682</Statistics_db-num>
+      <Statistics_db-len>419041974</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.46</Statistics_kappa>
+      <Statistics_lambda>1.28</Statistics_lambda>
+      <Statistics_entropy>0.85</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

@@ -7,7 +7,7 @@ import argparse
 from subprocess import check_output, CalledProcessError
 import sys
 
-from . import cli, web, paste
+from . import cli, web, paste, convert, ref_download, ref_blast, ref_consensus
 
 #: The required executables in PATH.
 REQUIRED_EXECTUABLES = ("blastn",)
@@ -17,9 +17,13 @@ def main(argv=None):
     """Main entrypoint (before parsing command line arguments)."""
     parser = argparse.ArgumentParser(description="Classify Lso Sanger reads.")
     subparsers = parser.add_subparsers()
+    convert.add_parser(subparsers)
     cli.add_parser(subparsers)
     web.add_parser(subparsers)
     paste.add_parser(subparsers)
+    ref_download.add_parser(subparsers)
+    ref_blast.add_parser(subparsers)
+    ref_consensus.add_parser(subparsers)
 
     for prog in REQUIRED_EXECTUABLES:
         found_all = True

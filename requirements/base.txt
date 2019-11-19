@@ -21,9 +21,9 @@ xlsxwriter
 
 # Dash and friends
 dash[testing]
-dash-renderer 
-dash-html-components 
-dash-core-components 
+dash-renderer
+dash-html-components
+dash-core-components
 dash-bootstrap-components
-dash_table 
+dash_table
 plotly

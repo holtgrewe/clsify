@@ -40,7 +40,7 @@ def write_pasted(results, output_prefix):
             if match.database is None:
                 logger.info("  => no match for %s", match.query)
                 continue
-            query = match.query.split(' ')[0]
+            query = match.query.split(" ")[0]
             out_path = "{}{}/{}-{}.fasta".format(
                 output_prefix, match.database, query, match.database
             )
@@ -54,7 +54,7 @@ def write_pasted(results, output_prefix):
                     qseq = revcomp(seq)
                 seq = seq[: match.database_start] + qseq + seq[match.database_end :]
                 seq = "".join([c for c in seq if c != "N"]).upper()
-                #print(">{}-{}".format(query, match.database), file=outputf)
+                # print(">{}-{}".format(query, match.database), file=outputf)
                 print(">{} ({} bp)".format(query, len(seq)), file=outputf)
                 print("\n".join(textwrap.wrap(seq)), file=outputf)
 
