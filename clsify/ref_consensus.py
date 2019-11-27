@@ -239,8 +239,10 @@ def call_variants(ref, alt):
                         curr_var = {
                             "pos": curr_var["pos"],
                             "ali_pos": curr_var["ali_pos"] - 1,
-                            "ref": curr_var["ref"] + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
-                            "alt": curr_var["alt"] + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
+                            "ref": curr_var["ref"]
+                            + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
+                            "alt": curr_var["alt"]
+                            + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
                         }
                 curr_var["description"] = describe(**curr_var)
                 result[curr_var["pos"]] = curr_var
