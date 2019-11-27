@@ -31,6 +31,16 @@ def load_fasta(path):
     return result
 
 
+def do_paste(match, ref_seqs=None):
+    ref_seqs = ref_seqs or load_fasta(REF_FILE)
+    seq = ref_seqs[match.database]
+    qseq = "".join([c for c in match.alignment.qseq if c in "cgatnCGATN"])
+    if match.query_strand == "-":
+        qseq = revcomp(seq)
+    seq = seq[: match.database_start] + qseq + seq[match.database_end :]
+    return "".join([c for c in seq if c != "N"]).upper()
+
+
 def write_pasted(results, output_prefix):
     logger.info("Loading reference sequences...")
     ref_seqs = load_fasta(REF_FILE)
@@ -48,12 +58,7 @@ def write_pasted(results, output_prefix):
                 os.makedirs(os.path.dirname(out_path))
             logger.info("  - %s", out_path)
             with open(out_path, "wt") as outputf:
-                seq = ref_seqs[match.database]
-                qseq = "".join([c for c in match.alignment.qseq if c in "cgatnCGATN"])
-                if match.query_strand == "-":
-                    qseq = revcomp(seq)
-                seq = seq[: match.database_start] + qseq + seq[match.database_end :]
-                seq = "".join([c for c in seq if c != "N"]).upper()
+                seq = do_paste(match, ref_seqs)
                 # print(">{}-{}".format(query, match.database), file=outputf)
                 print(">{} ({} bp)".format(query, len(seq)), file=outputf)
                 print("\n".join(textwrap.wrap(seq)), file=outputf)

@@ -12,8 +12,11 @@ The following actions are performed for this step:
 3. Perform MSA of the type reference sequences and generate a haplotyping table from this.
 """
 
+import itertools
+import json
 import os
 import shlex
+import shutil
 import subprocess
 import tempfile
 import textwrap
@@ -24,7 +27,8 @@ from logzero import logger
 
 from .ref_blast import load_tsv
 from .cli import _proc_args
-from .paste import load_fasta
+from .paste import load_fasta, REF_FILE, do_paste
+from .workflow import only_blast
 
 
 def paste_query_seq(query_seq, blast_alignment):
@@ -67,7 +71,7 @@ def write_consensus(path, query_name, query_seq, alignments, args):
     )
 
     good_alis = [
-        a for a in sorted_alis if a.hsps[0].identities > a.hsps[0].align_length - args.max_errors
+        a for a in sorted_alis if a.hsps[0].identities >= a.hsps[0].align_length - args.max_errors
     ]
     logger.info("- picked %d alignments with up to %d errors", len(good_alis), args.max_errors)
     logger.info("  %s", [a.title.split("|")[3] for a in good_alis])
@@ -79,31 +83,43 @@ def write_consensus(path, query_name, query_seq, alignments, args):
         tmp_fasta = os.path.join(tmpdir, "seqs.fasta")
         logger.info("Writing to %s...", tmp_fasta)
         with open(tmp_fasta, "wt") as tmpf:
-            for ali in good_alis:
+            for ali_count, ali in enumerate(good_alis):
                 pasted_seq = "\n".join(textwrap.wrap(paste_query_seq(query_seq, ali)))
                 print(">%s\n%s" % (ali.title.split("|")[3], pasted_seq), file=tmpf)
 
-        path_alignment = path[: -len(".consensus.fasta")] + ".clustalo.fasta"
+        path_alignment = path[: -len(".consensus.fasta")] + ".clustalw.fasta"
         if os.path.exists(path_alignment):
             logger.warn("Already exists: %s", path_alignment)
-            logger.warn(" => not running Clustal-Omega")
+            logger.warn(" => not running ClustalW")
+        elif ali_count == 0:
+            logger.warn("Only one sequence, no need to align, just copy")
+            shutil.copy(tmp_fasta, path_alignment)
         else:
-            logger.info("Running Clustal-Omega")
-            cmd = Applications.ClustalOmegaCommandline(
-                infile=tmp_fasta, outfile=path_alignment, verbose=True, auto=True
-            )
-            logger.info("- %s", cmd)
-            res = subprocess.check_call(shlex.split(str(cmd)))
+            logger.info("Running ClustalW")
+            cmd = [
+                "clustalw",
+                "-INFILE=%s" % tmp_fasta,
+                "-ALIGN",
+                "-OUTFILE=%s" % path_alignment,
+                "-OUTPUT=FASTA",
+                "-OUTORDER=ALIGNED",
+                "-SEED=42",
+            ]
+            logger.info("- %s", " ".join(cmd))
+            res = subprocess.check_call(cmd)
             if res != 0:
-                logger.error("Runing Clustal-Omega failed with retval %d", res)
+                logger.error("Runing ClustalW failed with retval %d", res)
             else:
-                logger.info("Done running Clustal-Omega!")
+                logger.info("Done running ClustalW!")
 
     logger.info("Computing consensus sequence to %s", path)
     fasta = load_fasta(path_alignment)
-    consensus_seq = "".join(map(consensus, zip(*fasta.values())))
+    consensus_seq = "".join(filter(lambda x: x in "ACGTN", map(consensus, zip(*fasta.values()))))
     with open(path, "wt") as outputf:
-        print(">consensus-%s\n%s" % (query_name, "\n".join(textwrap.wrap(consensus_seq))), file=outputf)
+        print(
+            ">consensus-%s\n%s" % (query_name, "\n".join(textwrap.wrap(consensus_seq))),
+            file=outputf,
+        )
 
 
 def build_seed_consensus(records, args):
@@ -139,10 +155,213 @@ def build_haplotype_sequences(records, args):
     """Build consensus sequence for each seed."""
     logger.info("Building building haplotype sequences...")
 
+    ref_seqs = load_fasta(REF_FILE)
+    base_dir = os.path.dirname(args.in_tsv)
+
+    results = {}  # actually consensus seeds
+    for record in records:
+        out_path = os.path.join(base_dir, record["region"] + ".fasta")
+        if os.path.exists(out_path):
+            logger.warn("Output path exists, skipping: %s", out_path)
+            continue
+
+        key = (record["haplotype"], record["region"])
+        logger.info("Handling %s", record["path"])
+        basename = os.path.basename(record["path"])[: -len(".fasta")]
+        matches = only_blast(os.path.join(base_dir, basename + ".consensus.fasta"))
+        # matches[record["region"]][record["haplotype"]] = seed_matches
+        for match in matches:
+            if match.database is None:
+                logger.info("  => no match for %s", match.query)
+            else:
+                logger.info("Pasting region=%s haplotype=%s", record["region"], record["haplotype"])
+                seq = do_paste(match, ref_seqs)
+                results.setdefault(record["region"], {})[record["haplotype"]] = seq
+
+    for region, region_results in results.items():
+        fasta = os.path.join(base_dir, region + ".fasta")
+        logger.info("Writing padded consensus seed to to %s", fasta)
+        with open(fasta, "wt") as outputf:
+            for haplotype, seq in region_results.items():
+                wrapped = textwrap.wrap(seq)
+                print(">%s_%s\n%s" % (region, haplotype, "\n".join(wrapped)), file=outputf)
+
+    return results
+
+
+def strip_n(s):
+    return "".join([c for c in s if c not in "nN"])
+
+
+def describe(*, ali_pos, ref, alt, **kwargs):
+    """Return description of variant."""
+    if "-" in ref and "-" in alt:
+        raise Exception("Cannot handle this yet!")
+    elif "-" in ref:
+        if "-" not in ref[1]:
+            raise Exception("Cannot handle this yet!")
+        else:
+            if len(ref) == 2:
+                return "n.%ddel%s" % (ali_pos, alt[1:])
+            else:
+                return "n.%d_%ddel%s" % (ali_pos, ali_pos + len(ref) - 2, alt[1:])
+    elif "-" in alt:
+        if "-" not in alt[1]:
+            raise Exception("Cannot handle this yet!")
+        else:
+            return "n.%d_%dins%s" % (ali_pos, ali_pos + 1, ref[1:])
+    elif len(ref) == 1 and len(alt) == 1:
+        return "n.%d%s>%s" % (ali_pos, ref, alt)
+    else:
+        return "n.%d_%ddel%sins%s" % (ali_pos - 1, ali_pos, ref, alt)
+
+
+def call_variants(ref, alt):
+    if len(ref) != len(alt):
+        raise Exception("Invalid alignment row lengths: %d vs. %d", len(ref), len(alt))
+    result = {}
+
+    pos_ref = 0  # position in ref
+    i = 0  # position in rows
+    curr_var = None
+    while i < len(ref):
+        if ref[i] == alt[i]:
+            if curr_var:
+                if curr_var["ref"].startswith("-") or curr_var["alt"].startswith("-"):
+                    if curr_var["ali_pos"] > 1:  # left-pad indels if possible
+                        curr_var = {
+                            "pos": curr_var["pos"] - 1,
+                            "ali_pos": curr_var["ali_pos"] - 1,
+                            "ref": ref[curr_var["pos"] - 2] + curr_var["ref"],
+                            "alt": alt[curr_var["pos"] - 2] + curr_var["alt"],
+                        }
+                    else:  # use base right of it, VCF-style
+                        curr_var = {
+                            "pos": curr_var["pos"],
+                            "ali_pos": curr_var["ali_pos"] - 1,
+                            "ref": curr_var["ref"] + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
+                            "alt": curr_var["alt"] + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
+                        }
+                curr_var["description"] = describe(**curr_var)
+                result[curr_var["pos"]] = curr_var
+                curr_var = None
+        else:
+            if curr_var:
+                curr_var["ref"] = curr_var["ref"] + ref[i]
+                curr_var["alt"] = curr_var["alt"] + alt[i]
+            else:
+                curr_var = {"pos": pos_ref + 1, "ali_pos": i + 1, "ref": ref[i], "alt": alt[i]}
+
+        if ref[i] != "-":
+            pos_ref += 1
+        i += 1
+
+    if curr_var:
+        if curr_var["ref"].startswith("-") or curr_var["alt"].startswith("-"):
+            if curr_var["ali_pos"] > 1:  # left-pad indels if possible
+                curr_var = {
+                    "pos": curr_var["pos"] - 1,
+                    "ali_pos": curr_var["ali_pos"] - 1,
+                    "ref": ref[curr_var["ali_pos"] - 2] + curr_var["ref"],
+                    "alt": alt[curr_var["ali_pos"] - 2] + curr_var["alt"],
+                }
+            else:  # use base right of it, VCF-style
+                curr_var = {
+                    "pos": curr_var["ali_pos"],
+                    "ali_pos": curr_var["ali_pos"] - 1,
+                    "ref": curr_var["ref"] + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
+                    "alt": curr_var["alt"] + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
+                }
+        curr_var["description"] = describe(**curr_var)
+        result[curr_var["pos"]] = describe(**curr_var)
+
+    return result
+
 
 def build_haplotyping_table(records, args):
     """Build consensus sequence for each seed."""
     logger.info("Building haplotyping table...")
+
+    ref_seqs = load_fasta(REF_FILE)
+    base_dir = os.path.dirname(args.in_tsv)
+
+    ali_input = {
+        key.split("_")[1]: {key.split("_")[1]: strip_n(value)} for key, value in ref_seqs.items()
+    }
+
+    for region, seqs in ali_input.items():
+        fasta_path = os.path.join(base_dir, "%s.fasta" % region)
+        if not os.path.exists(fasta_path):
+            logger.warn("Consensus sequences FASTA not found, skipping: %s", fasta_path)
+        else:
+            logger.info("Loading consensus sequences FASTA: %s", fasta_path)
+            seqs.update(load_fasta(fasta_path))
+
+    for region, seqs in ali_input.items():
+        path_alignment = os.path.join(base_dir, "%s.clustalw.fasta" % region)
+        if len(seqs) == 1:
+            logger.warn("Only reference and no consensus, skipping: %s", path_alignment)
+            continue
+
+        logger.info("Running ClustalW on consensus alignments for %s", region)
+        if os.path.exists(path_alignment):
+            logger.warn("Ref+consensus alignment already exists, skipping: %s", path_alignment)
+        else:
+            with tempfile.TemporaryDirectory() as tmpdir:
+                tmp_fasta = os.path.join(tmpdir, "seqs.fasta")
+                logger.info("Writing to %s...", tmp_fasta)
+                with open(tmp_fasta, "wt") as tmpf:
+                    for name, seq in seqs.items():
+                        print(">%s\n%s" % (name, seq), file=tmpf)
+
+                logger.info("Running ClustalW")
+                cmd = [
+                    "clustalw",
+                    "-INFILE=%s" % tmp_fasta,
+                    "-ALIGN",
+                    "-OUTFILE=%s" % path_alignment,
+                    "-OUTPUT=FASTA",
+                    "-OUTORDER=ALIGNED",
+                    "-SEED=42",
+                ]
+                logger.info("- %s", " ".join(cmd))
+                res = subprocess.check_call(cmd)
+                if res != 0:
+                    logger.error("Runing ClustalW failed with retval %d", res)
+                else:
+                    logger.info("Done running ClustalW!")
+
+        logger.info("Loading MSA from %s", path_alignment)
+        alignment = load_fasta(path_alignment)
+
+        logger.info("Generating variant table for each haplotype")
+        variants = {
+            key: call_variants(alignment[region], alignment[key])
+            for key in sorted(alignment.keys())
+            if key != region
+        }
+        xs = set()
+        for calls in variants.values():
+            for vals in calls.values():
+                pos = vals["pos"]
+                desc = vals["description"]
+                xs.add((pos, desc))
+
+        header = ["row", "pos", "description"] + list(variants.keys())
+        lines = []
+        for row, (pos, desc) in enumerate(sorted(xs), 1):
+            line = [row, pos, desc]
+            for name in variants.keys():
+                line.append(
+                    "+"
+                    if pos in variants[name] and variants[name][pos]["description"] == desc
+                    else "-"
+                )
+            lines.append(line)
+
+        print("\t".join(map(str, header)))
+        for line in lines:
+            print("\t".join(map(str, line)))
 
 
 def run(parser, args):
@@ -168,7 +387,7 @@ def add_parser(subparser):
     parser.add_argument(
         "--max-errors",
         type=int,
-        default=2,
+        default=0,  # TODO: make sequence-specific!
         help="Maximal number of mismatches to accept in seed consensus computation",
     )
     parser.add_argument("in_tsv", help="Path to output TSV file.")

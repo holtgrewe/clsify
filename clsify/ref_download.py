@@ -49,6 +49,8 @@ def load_tsv(input_path):
     records = []
     with open(input_path, "rt") as inputf:
         for line in inputf:
+            if line.startswith("#"):
+                continue
             arr = line.strip().split("\t")
             if not header:
                 header = arr

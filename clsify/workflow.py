@@ -38,7 +38,7 @@ class NamedSequence:
     sequence: str
 
 
-def blast_and_haplotype(path_query):
+def only_blast(path_query):
     """Run BLAST and haplotyping for the one file at ``path_query``."""
     logger.info("Running BLAST on all references for %s...", path_query)
     with open(path_query, "rt") as inputf:
@@ -55,9 +55,12 @@ def blast_and_haplotype(path_query):
                     line_name = line
             elif line_name is not None:
                 lines_seq.append(line)
-    matches = run_blast(REF_FILE, path_query)
-    haplo_result = run_haplotyping(matches)
-    return matches, haplo_result
+    return run_blast(REF_FILE, path_query)
+
+
+def blast_and_haplotype(path_query):
+    matches = blast_and_haplotype
+    return matches, run_haplotyping(path_query)
 
 
 def blast_and_haplotype_many(paths_query):

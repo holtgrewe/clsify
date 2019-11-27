@@ -13,14 +13,11 @@ cattrs
 # Conversion of file formats.
 bioconvert
 
-# Phylogenetic computing.
-dendropy ==4.4.0
-
 # Writing of XLSX files.
 xlsxwriter
 
 # Dash and friends
-dash[testing]
+dash # [testing]
 dash-renderer
 dash-html-components
 dash-core-components

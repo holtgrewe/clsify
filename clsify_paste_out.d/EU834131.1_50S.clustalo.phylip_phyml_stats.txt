@@ -5,7 +5,7 @@
                              Copyright CNRS - Universite Montpellier                                 
  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-. Sequence filename: 			EU834131.1_50S.clustalo.phylip
+. Sequence filename: 			EU834131.1_50S.clustalw.phylip
 . Data set: 				#1
 . Initial tree: 			BioNJ
 . Model of nucleotides substitution: 	HKY85
