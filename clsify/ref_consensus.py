@@ -13,7 +13,6 @@ The following actions are performed for this step:
 """
 
 import itertools
-import json
 import os
 import shlex
 import shutil
@@ -193,6 +192,10 @@ def strip_n(s):
     return "".join([c for c in s if c not in "nN"])
 
 
+def only_bases(s):
+    return "".join([x for x in s if x.upper() in "CGATN"])
+
+
 def describe(*, ali_pos, ref, alt, **kwargs):
     """Return description of variant."""
     if "-" in ref and "-" in alt:
@@ -299,7 +302,20 @@ def build_haplotyping_table(records, args):
             logger.info("Loading consensus sequences FASTA: %s", fasta_path)
             seqs.update(load_fasta(fasta_path))
 
+    result = {}
+
     for region, seqs in ali_input.items():
+        for seq_name, ref_seq in ref_seqs.items():
+            ref_name, ref_region = seq_name.split("_", 1)
+            if ref_region == region:
+                ref_offset = 0
+                for ref_offset, c in enumerate(ref_seq):
+                    if c == "N":
+                        break
+                break  # => ref_name, ref_seq, ref_offset are set, else Exception is raised
+        else:
+            raise Exception("Could not find reference for %s" % ref_name)
+
         path_alignment = os.path.join(base_dir, "%s.clustalw.fasta" % region)
         if len(seqs) == 1:
             logger.warn("Only reference and no consensus, skipping: %s", path_alignment)
@@ -349,21 +365,54 @@ def build_haplotyping_table(records, args):
                 desc = vals["description"]
                 xs.add((pos, desc))
 
-        header = ["row", "pos", "description"] + list(variants.keys())
+        table = {}
+        haplotypes = [h.split("_")[1] for h in variants.keys()]
+
+        header = ["row", "pos", "description"] + haplotypes
         lines = []
         for row, (pos, desc) in enumerate(sorted(xs), 1):
+            ref_seq, region = seq_name.split("_", 1)
+            record = {"reference": ref_seq, "region": region, "position": pos}
             line = [row, pos, desc]
+
+            # Find reference allele bases.
+            ref = "N"
             for name in variants.keys():
-                line.append(
-                    "+"
-                    if pos in variants[name] and variants[name][pos]["description"] == desc
-                    else "-"
-                )
+                if pos in variants[name] and variants[name][pos]["description"] == desc:
+                    ref = variants[name][pos]["ref"]
+                    break
+
+            for name in variants.keys():
+                if pos in variants[name] and variants[name][pos]["description"] == desc:
+                    record[name.split("_", 1)[1]] = only_bases(variants[name][pos]["alt"])
+                    line.append("+")
+                else:
+                    record[name.split("_", 1)[1]] = only_bases(ref)
+                    line.append("-")
+            table[(pos, desc)] = record
             lines.append(line)
 
+        result[(ref_name, ref_region)] = dict(sorted(table.items()))
+        # import pdb; pdb.set_trace()
+
+        print("Haplotyping Table")
+        print("-----------------")
+        print()
         print("\t".join(map(str, header)))
         for line in lines:
             print("\t".join(map(str, line)))
+
+    if args.output_table:
+        separator = "# --------\t------\t------\t--------------" + "\t------" * len(haplotypes)
+        with open(args.output_table, "wt") as haplof:
+            print(separator, file=haplof)
+            print("\t".join(["reference", "region", "pos", "description"] + haplotypes), file=haplof)
+            print(separator, file=haplof)
+            for (ref_name, ref_region), records in result.items():
+                for (pos, desc), record in records.items():
+                    line = [ref_name, ref_region, pos, desc] + [record[h] for h in haplotypes]
+                    print("\t".join(map(str, line)), file=haplof)
+                print(separator, file=haplof)
 
 
 def run(parser, args):
@@ -392,4 +441,5 @@ def add_parser(subparser):
         default=0,  # TODO: make sequence-specific!
         help="Maximal number of mismatches to accept in seed consensus computation",
     )
+    parser.add_argument("--output-table", default=None, help="Path to output haplotype table.")
     parser.add_argument("in_tsv", help="Path to output TSV file.")

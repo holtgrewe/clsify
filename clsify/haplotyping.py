@@ -41,7 +41,7 @@ def load_haplotyping_table(path: str) -> typing.Dict[typing.Tuple[str, int], Hap
                 header = arr
             else:
                 record = dict(zip(header, arr))
-                key = (record["reference"], int(record["position"]) - 1)
+                key = (record["reference"], int(record["pos"]) - 1)
                 result[key] = HaplotypingPos(
                     reference=key[0], position=key[1], haplo_values=dict(zip(header[2:], arr[2:]))
                 )
