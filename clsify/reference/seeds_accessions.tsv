@@ -5,6 +5,14 @@ Ca. L. solanacearum	C	16S	GU373048.1	.
 Ca. L. solanacearum	D	16S	HQ454302.1	.
 Ca. L. solanacearum	E	16S	KF737348.1	.
 #Ca. L. solanacearum	F	16S	MH259669.1	.
+# ----------------------------------------------
+Ca. L. solanacearum	A	16S-23S	FJ830690.1	.
+Ca. L. solanacearum	B	16S-23S	FJ830700.1	.
+Ca. L. solanacearum	C	16S-23S	JX280523.1	.
+Ca. L. solanacearum	D	16S-23S	JX308304.1	.
+# TODO: really: KF737349.1??
+Ca. L. solanacearum	E	16S-23S	KF737347.1	.
+# ----------------------------------------------
 Ca. L. solanacearum	A	50S	EU834131.1	.
 Ca. L. solanacearum	B	50S	FJ498807.1	.
 Ca. L. solanacearum	C	50S	GU373051.1	.

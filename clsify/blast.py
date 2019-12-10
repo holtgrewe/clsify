@@ -11,12 +11,11 @@ import shlex
 import json
 
 import attr
+from Bio.Blast import NCBIXML
+import io
 from logzero import logger
 
-
-def revcomp(seq):
-    m = {"a": "t", "A": "T", "t": "a", "T": "A", "c": "g", "C": "G", "g": "c", "G": "C"}
-    return "".join(reversed(list(map(lambda x: m.get(x, x), seq))))
+from .common import revcomp, rev
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -30,10 +29,10 @@ class Alignment:
     #: query sequence
     qseq: str
 
-    def revcomp(self):
+    def revcomp(self) -> typing.TypeVar("Alignment"):
         return Alignment(revcomp(self.hseq), "".join(reversed(self.midline)), revcomp(self.qseq))
 
-    def wrapped(self, qry_start, db_start, line_length=60):
+    def wrapped(self, qry_start: int, db_start: int, line_length: int = 60) -> str:
         result = []
         for offset in range(0, len(self.hseq), line_length):
             end = min(len(self.hseq), offset + line_length)
@@ -48,7 +47,7 @@ class Alignment:
         return "\n".join(result)
 
     @staticmethod
-    def build_empty():
+    def build_empty() -> typing.TypeVar("Alignment"):
         return Alignment(hseq="", midline="", qseq="")
 
 
@@ -56,6 +55,8 @@ class Alignment:
 class BlastMatch:
     """Representation of a match."""
 
+    #: query file name
+    path: typing.Optional[str]
     #: query sequence name
     query: str
     #: database sequence name
@@ -80,16 +81,15 @@ class BlastMatch:
     match_seq: str
     #: Alignment
     alignment: typing.Optional[Alignment]
-    #: string with original JSON of match
-    match_json: str
 
     @property
-    def is_match(self):
+    def is_match(self) -> bool:
         return bool(self.database)
 
     @staticmethod
-    def build_nomatch(query, match_json):
+    def build_nomatch(query, path: str = None) -> typing.TypeVar("BlastMatch"):
         return BlastMatch(
+            path=path,
             query=query,
             database=None,
             identity=0.0,
@@ -102,21 +102,22 @@ class BlastMatch:
             match_cigar="",
             match_seq="",
             alignment=Alignment.build_empty(),
-            match_json=match_json,
         )
 
 
-def is_nucl(c):
+def is_nucl(c: str) -> bool:
     """Helper, returns wether ``c`` is a nucleotide character."""
     return c in "acgtnACGTN"
 
 
-def match_cigar(qseq, hseq, query_start, query_end, query_len):
+def match_cigar(
+    qseq: str, hseq: str, query_start: int, query_end: int, query_len: int
+) -> typing.Tuple[typing.Tuple[int, str]]:
     """Return CIGAR string for the match with the given paraemters."""
     match_cigar = []
     if query_start > 0:
         match_cigar.append([query_start, "H"])
-    for i, (q, h) in enumerate(zip(qseq, hseq)):
+    for q, h in zip(qseq, hseq):
         if q == "-":
             op = "D"
         elif h == "-":
@@ -129,56 +130,63 @@ def match_cigar(qseq, hseq, query_start, query_end, query_len):
             match_cigar.append([1, op])
     if query_end != query_len:
         match_cigar.append([query_len - query_end, "H"])
-    return match_cigar
+    return tuple(tuple(t) for t in match_cigar)
 
 
-def parse_blastn_json(blastn_json):
-    """Parse BLASTN output in JSON format and return ``BlastMatch``."""
-    match_dict = json.loads(blastn_json)
-    search = match_dict["BlastOutput2"][0]["report"]["results"]["search"]
-    hits = search["hits"]
+def only_dna(seq: str) -> str:
+    """Return ``str`` with all ACGTN characters from ``seq``."""
+    return "".join(filter(lambda x: x in "ACGTNacgtn", seq))
+
+
+def parse_blastn_xml(
+    blastn_xml: str, path_query: typing.Optional[str] = None
+) -> typing.Tuple[BlastMatch]:
+    """Parse BLASTN output in JSON format and return list of ``BlastMatch``."""
     result = []
-    for hit in hits:
-        hsp = hit["hsps"][0]
-        qseq = "".join(filter(lambda x: x in "ACGTNacgtn", hsp["qseq"]))
-        hseq = "".join(filter(lambda x: x in "ACGTNacgtn", hsp["hseq"]))
-        db_strand = "+" if hsp["hit_strand"] == "Plus" else "-"
-        db_start = min(hsp["hit_from"], hsp["hit_to"]) - 1
-        query_start = min(hsp["query_from"], hsp["query_to"]) - 1
-        query_end = max(hsp["query_from"], hsp["query_to"])
-        query_strand = "+" if hsp["query_strand"] == "Plus" else "-"
-        alignment = Alignment(hseq=hsp["hseq"], midline=hsp["midline"], qseq=hsp["qseq"])
-        if db_strand != "+":  # ensure database is always forward
-            logger.info("Reverse-complementing match!")
-            db_strand = "+"
-            query_strand = {"+": "-", "-": "+"}[query_strand]
-            qseq = revcomp(qseq)
-            hseq = revcomp(hseq)
-            alignment = alignment.revcomp()
-        cigar = match_cigar(qseq, hseq, query_start, query_end, search["query_len"])
-        result.append(
-            BlastMatch(
-                query=search["query_title"],
-                database=hit["description"][0]["title"].split()[0],
-                identity=hsp["identity"] / hsp["align_len"],
-                query_strand=query_strand,
-                query_start=query_start,
-                query_end=query_end,
-                database_strand=db_strand,
-                database_start=db_start,
-                database_end=max(hsp["hit_from"], hsp["hit_to"]),
-                match_cigar="".join(["".join(map(str, x)) for x in cigar]),
-                match_seq="".join([x for x in filter(is_nucl, qseq)]),
-                alignment=alignment,
-                match_json=blastn_json,
+    for blast_record in NCBIXML.parse(io.StringIO(blastn_xml)):
+        for blast_alignment in blast_record.alignments:
+            hsp = blast_alignment.hsps[0]
+            qseq = only_dna(hsp.query)
+            hseq = only_dna(hsp.sbjct)
+            db_strand = "+" if hsp.strand[1] == "Plus" else "-"
+            db_start = min(hsp.sbjct_start, hsp.sbjct_end) - 1
+            db_end = max(hsp.sbjct_start, hsp.sbjct_end)
+            query_strand = "+" if hsp.strand[0] == "Plus" else "-"
+            query_start = min(hsp.query_start, hsp.query_end) - 1
+            query_end = max(hsp.query_start, hsp.query_end)
+            if db_strand == "-":
+                db_strand = "+"
+                query_strand = "-" if query_strand == "+" else "+"
+                qseq = revcomp(qseq)
+                hseq = revcomp(hseq)
+                alignment = Alignment(
+                    hseq=revcomp(hsp.sbjct), midline=rev(hsp.match), qseq=revcomp(hsp.query)
+                )
+            else:
+                alignment = Alignment(hseq=hsp.sbjct, midline=hsp.match, qseq=hsp.query)
+            cigar = match_cigar(qseq, hseq, query_start, query_end, blast_record.query_letters)
+            result.append(
+                BlastMatch(
+                    path=path_query,
+                    query=blast_record.query,
+                    database=blast_alignment.title.split()[1],
+                    identity=hsp.identities / hsp.align_length,
+                    query_strand=query_strand,
+                    query_start=query_start,
+                    query_end=query_end,
+                    database_strand=db_strand,
+                    database_start=db_start,
+                    database_end=db_end,
+                    match_cigar="".join(["".join(map(str, x)) for x in cigar]),
+                    match_seq="".join([x for x in filter(is_nucl, qseq)]),
+                    alignment=alignment,
+                )
             )
-        )
-    return result
+    return tuple(result)
 
 
-def run_blast(database, query):
+def run_blast(database: str, query: str) -> typing.Tuple[BlastMatch]:
     """Run blastn on FASTA query ``query`` to database sequence at ``database``."""
-    cmd = ("blastn", "-db", shlex.quote(database), "-query", shlex.quote(query), "-outfmt", "15")
+    cmd = ("blastn", "-db", database, "-query", query, "-outfmt", "16")
     logger.info("Executing %s", repr(" ".join(cmd)))
-    blastn_json = subprocess.check_output(cmd).decode("utf-8")
-    return parse_blastn_json(blastn_json)
+    return parse_blastn_xml(subprocess.check_output(cmd).decode("utf-8"), path_query=query)

@@ -1,11 +1,16 @@
-species	haplotype	region	path
-Ca. L. solanacearum	A	16S	FJ498802.1.fasta
-Ca. L. solanacearum	B	16S	FJ939136.1.fasta
-Ca. L. solanacearum	C	16S	GU373048.1.fasta
-Ca. L. solanacearum	D	16S	HQ454302.1.fasta
-Ca. L. solanacearum	E	16S	KF737348.1.fasta
-Ca. L. solanacearum	A	50S	EU834131.1.fasta
-Ca. L. solanacearum	B	50S	FJ498807.1.fasta
-Ca. L. solanacearum	C	50S	GU373051.1.fasta
-Ca. L. solanacearum	D	50S	HQ454317.1.fasta
-Ca. L. solanacearum	E	50S	KY777461.1.fasta
+species	haplotype	region	accession	path
+Ca. L. solanacearum	A	16S	FJ498802.1	FJ498802.1.fasta
+Ca. L. solanacearum	B	16S	FJ939136.1	FJ939136.1.fasta
+Ca. L. solanacearum	C	16S	GU373048.1	GU373048.1.fasta
+Ca. L. solanacearum	D	16S	HQ454302.1	HQ454302.1.fasta
+Ca. L. solanacearum	E	16S	KF737348.1	KF737348.1.fasta
+Ca. L. solanacearum	A	16S-23S	FJ830690.1	FJ830690.1.fasta
+Ca. L. solanacearum	B	16S-23S	FJ830700.1	FJ830700.1.fasta
+Ca. L. solanacearum	C	16S-23S	JX280523.1	JX280523.1.fasta
+Ca. L. solanacearum	D	16S-23S	JX308304.1	JX308304.1.fasta
+Ca. L. solanacearum	E	16S-23S	KF737347.1	KF737347.1.fasta
+Ca. L. solanacearum	A	50S	EU834131.1	EU834131.1.fasta
+Ca. L. solanacearum	B	50S	FJ498807.1	FJ498807.1.fasta
+Ca. L. solanacearum	C	50S	GU373051.1	GU373051.1.fasta
+Ca. L. solanacearum	D	50S	HQ454317.1	HQ454317.1.fasta
+Ca. L. solanacearum	E	50S	KY777461.1	KY777461.1.fasta

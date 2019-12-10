@@ -7,7 +7,7 @@ HOME_BRAND = "clsify"
 
 # TODO: should this come from the UI?
 #: The sample regex
-SAMPLE_REGEX = r"(?P<sample>.*)_(?P<region>[^_\.]+)_(?P<primer>[^_\.]+)"
+SAMPLE_REGEX = r"(?P<sample>[^_]+_[^_]+_[^_]+)_(?P<region>[^_]+)_(?P<primer>.*)"
 
 #: Default read name pattern.
 # SAMPLE_REGEX = r".*(?P<sample>([^\.]+))\.(?P<region>([^\.]+)\.(?P<primer>([^\.]+))"

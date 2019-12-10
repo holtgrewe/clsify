@@ -27,5 +27,11 @@ def add_parser(subparser):
     parser = subparser.add_parser("convert")
     parser.set_defaults(func=run)
 
+    parser.add_argument(
+        "--file-name-as-seq-name",
+        action="store_true",
+        default=False,
+        help="Set file name to sample name",
+    )
     parser.add_argument("out_dir", help="Path to output directory.")
     parser.add_argument("seq_files", nargs="+", default=[], action="append")

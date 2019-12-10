@@ -7,14 +7,15 @@ from Bio import Entrez
 from logzero import logger
 
 from .cli import _proc_args
+from .common import load_tsv
 
 #: Known FASTA extensions.
 FASTA_EXTS = (".fasta", ".fa", ".fna")
 
 #: Reference sequences.
 REF_SEQS = {
-    "16S": {"accession": "EU812559.1", "start": 0, "end": 1500},
-    "16S-23S": {"accession": "EU812559.1", "start": 1500, "end": 2515},
+    "16S": {"accession": "EU812559.1", "start": 0, "end": 1225},
+    "16S-23S": {"accession": "EU812559.1", "start": 1225, "end": 2515},
     "50S": {"accession": "EU834131.1", "start": 0, "end": 1714},
 }
 
@@ -43,23 +44,6 @@ def download_references(_parser, args):
                 print("\n".join(textwrap.wrap(seq)), file=outputf)
 
 
-def load_tsv(input_path):
-    logger.info("Loading input TSV...")
-    header = None
-    records = []
-    with open(input_path, "rt") as inputf:
-        for line in inputf:
-            if line.startswith("#"):
-                continue
-            arr = line.strip().split("\t")
-            if not header:
-                header = arr
-            else:
-                records.append(dict(zip(header, arr)))
-
-    return header, records
-
-
 def download_seeds(parser, args):
     """Download seed sequences"""
     out_dir = os.path.dirname(args.out_tsv)
@@ -69,12 +53,13 @@ def download_seeds(parser, args):
         logger.warn("Skipping reference download.")
         return
 
+    logger.info("Loading input TSV...")
     header, records = load_tsv(args.in_tsv)
 
     logger.info("Downloading sequences...")
     for record in records:
-        if any((record["accession"].endswith(ext) for ext in FASTA_EXTS)):
-            logger.info("- already exists: %s", record["accession"])
+        if os.path.exists(os.path.join(out_dir, record["accession"])):
+            logger.info("- already exists: %s", os.path.join(out_dir, record["accession"]))
             record["path"] = record["accession"]
             out_path = os.path.join(out_dir, record["accession"])
             if not os.path.exists(out_path):

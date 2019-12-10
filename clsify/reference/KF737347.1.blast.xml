@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastn</BlastOutput_program>
+  <BlastOutput_version>BLASTN 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), &quot;A greedy algorithm for aligning DNA sequences&quot;, J Comput Biol 2000; 7(1-2):203-14.</BlastOutput_reference>
+  <BlastOutput_db>nt_v5</BlastOutput_db>
+  <BlastOutput_query-ID>Query_35695</BlastOutput_query-ID>
+  <BlastOutput_query-def>KF737347.1 Candidatus Liberibacter solanacearum isolate IVIA-1 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence</BlastOutput_query-def>
+  <BlastOutput_query-len>321</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_sc-match>1</Parameters_sc-match>
+      <Parameters_sc-mismatch>-2</Parameters_sc-mismatch>
+      <Parameters_gap-open>0</Parameters_gap-open>
+      <Parameters_gap-extend>0</Parameters_gap-extend>
+      <Parameters_filter>L;m;</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_35695</Iteration_query-ID>
+  <Iteration_query-def>KF737347.1 Candidatus Liberibacter solanacearum isolate IVIA-1 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence</Iteration_query-def>
+  <Iteration_query-len>321</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|575437435|gb|KF737347.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate IVIA-1 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KF737347</Hit_accession>
+  <Hit_len>321</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>593.895</Hsp_bit-score>
+      <Hsp_score>321</Hsp_score>
+      <Hsp_evalue>1.19994e-165</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>321</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>321</Hsp_identity>
+      <Hsp_positive>321</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>321</Hsp_align-len>
+      <Hsp_qseq>GGATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>GGATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|575437437|gb|KF737349.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate IVIA-V 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KF737349</Hit_accession>
+  <Hit_len>357</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>590.202</Hsp_bit-score>
+      <Hsp_score>319</Hsp_score>
+      <Hsp_evalue>1.55222e-164</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>355</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>319</Hsp_identity>
+      <Hsp_positive>319</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|1512459648|gb|MG911710.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 3283 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MG911710</Hit_accession>
+  <Hit_len>345</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>582.815</Hsp_bit-score>
+      <Hsp_score>315</Hsp_score>
+      <Hsp_evalue>2.59742e-162</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>345</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|1114674100|gb|KX752579.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate Johnsons 2 16S-23S ribosomal RNA intergenic spacer, partial sequence &gt;gi|1114674102|gb|KX752581.1| Candidatus Liberibacter solanacearum isolate Gartenland 2 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KX752579</Hit_accession>
+  <Hit_len>345</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>582.815</Hsp_bit-score>
+      <Hsp_score>315</Hsp_score>
+      <Hsp_evalue>2.59742e-162</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>345</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|1114674099|gb|KX752578.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate Johnsons 1 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KX752578</Hit_accession>
+  <Hit_len>345</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>582.815</Hsp_bit-score>
+      <Hsp_score>315</Hsp_score>
+      <Hsp_evalue>2.59742e-162</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>345</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|1114673836|gb|KX752576.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 5505002 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KX752576</Hit_accession>
+  <Hit_len>327</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>582.815</Hsp_bit-score>
+      <Hsp_score>315</Hsp_score>
+      <Hsp_evalue>2.59742e-162</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>327</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|1185654970|gb|KY619980.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 15208014 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619980</Hit_accession>
+  <Hit_len>314</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>580.968</Hsp_bit-score>
+      <Hsp_score>314</Hsp_score>
+      <Hsp_evalue>9.34198e-162</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>314</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>314</Hsp_identity>
+      <Hsp_positive>314</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>314</Hsp_align-len>
+      <Hsp_qseq>TAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>TAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|197709089|gb|EU935004.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate NZ083338 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence; and tRNA-Ile and tRNA-Ala genes, complete sequence</Hit_def>
+  <Hit_accession>EU935004</Hit_accession>
+  <Hit_len>2049</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1625</Hsp_hit-from>
+      <Hsp_hit-to>1943</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|195982567|gb|EU812559.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter psyllaurous isolate PRR1 16S ribosomal RNA gene, partial sequence; 16S-23S ribosomal RNA intergenic spacer, complete sequence; and 23S ribosomal RNA gene, partial sequence</Hit_def>
+  <Hit_accession>EU812559</Hit_accession>
+  <Hit_len>2515</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1621</Hsp_hit-from>
+      <Hsp_hit-to>1939</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|195982566|gb|EU812558.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter psyllaurous isolate Tom100 16S ribosomal RNA gene, partial sequence; 16S-23S ribosomal RNA intergenic spacer, complete sequence; and 23S ribosomal RNA gene, partial sequence</Hit_def>
+  <Hit_accession>EU812558</Hit_accession>
+  <Hit_len>2533</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1622</Hsp_hit-from>
+      <Hsp_hit-to>1940</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|195982565|gb|EU812557.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter psyllaurous isolate TVG28 16S ribosomal RNA gene, partial sequence; 16S-23S ribosomal RNA intergenic spacer, complete sequence; and 23S ribosomal RNA gene, partial sequence</Hit_def>
+  <Hit_accession>EU812557</Hit_accession>
+  <Hit_len>2512</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1626</Hsp_hit-from>
+      <Hsp_hit-to>1944</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|195982564|gb|EU812556.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter psyllaurous isolate Tx15 16S ribosomal RNA gene, partial sequence; 16S-23S ribosomal RNA intergenic spacer, complete sequence; and 23S ribosomal RNA gene, partial sequence</Hit_def>
+  <Hit_accession>EU812556</Hit_accession>
+  <Hit_len>2584</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1655</Hsp_hit-from>
+      <Hsp_hit-to>1973</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|194293712|gb|EU834130.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate NZ082226 16S ribosomal RNA gene and 16S-23S ribosomal RNA intergenic spacer, partial sequence; and tRNA-Ile and tRNA-Ala genes, complete sequence</Hit_def>
+  <Hit_accession>EU834130</Hit_accession>
+  <Hit_len>2073</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>573.582</Hsp_bit-score>
+      <Hsp_score>310</Hsp_score>
+      <Hsp_evalue>1.56324e-159</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1638</Hsp_hit-from>
+      <Hsp_hit-to>1956</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|289546836|gb|FJ914619.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter sp. Graden-City-KS-5 16S ribosomal RNA gene, partial sequence; and tRNA-Ile, tRNA-Ala, and 23S ribosomal RNA genes, cell wall-associated hydrolase pseudogene, 5S ribosomal RNA and tRNA-Met genes, complete sequence</Hit_def>
+  <Hit_accession>FJ914619</Hit_accession>
+  <Hit_len>5145</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>569.888</Hsp_bit-score>
+      <Hsp_score>308</Hsp_score>
+      <Hsp_evalue>2.02218e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1579</Hsp_hit-from>
+      <Hsp_hit-to>1899</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>317</Hsp_identity>
+      <Hsp_positive>317</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>321</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGG-A-TTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| | |||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|1227014289|gb|MF421730.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate SWE 2 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421730</Hit_accession>
+  <Hit_len>379</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>51</Hsp_hit-from>
+      <Hsp_hit-to>370</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|1227014287|gb|MF421728.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate UK 5 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421728</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>49</Hsp_hit-from>
+      <Hsp_hit-to>368</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|1227014285|gb|MF421726.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate UK 3 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421726</Hit_accession>
+  <Hit_len>364</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>355</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|1227014284|gb|MF421725.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate UK 2 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421725</Hit_accession>
+  <Hit_len>359</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>355</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|1227014283|gb|MF421724.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate UK 1 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421724</Hit_accession>
+  <Hit_len>366</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>356</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|1139870599|gb|KX431890.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 16sB 16S ribosomal RNA, tRNA-Ile, tRNA-Ala, 23S ribosomal RNA, 5S ribosomal RNA, and tRNA-Met genes, complete sequence &gt;gi|1139870600|gb|KX431891.1| Candidatus Liberibacter solanacearum isolate 16sC 16S ribosomal RNA, tRNA-Ile, tRNA-Ala, 23S ribosomal RNA, 5S ribosomal RNA, and tRNA-Met genes, complete sequence</Hit_def>
+  <Hit_accession>KX431890</Hit_accession>
+  <Hit_len>5670</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1944</Hsp_hit-from>
+      <Hsp_hit-to>2263</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|1139870598|gb|KX431889.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 16sA 16S ribosomal RNA, tRNA-Ile, tRNA-Ala, 23S ribosomal RNA, 5S ribosomal RNA, and tRNA-Met genes, complete sequence</Hit_def>
+  <Hit_accession>KX431889</Hit_accession>
+  <Hit_len>5670</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1944</Hsp_hit-from>
+      <Hsp_hit-to>2263</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|313495152|gb|CP002371.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum CLso-ZC1, complete genome</Hit_def>
+  <Hit_accession>CP002371</Hit_accession>
+  <Hit_len>1258278</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>615963</Hsp_hit-from>
+      <Hsp_hit-to>616282</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>316</Hsp_identity>
+      <Hsp_positive>316</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGCTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||| |||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>568.042</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>7.27307e-158</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>1004694</Hsp_hit-from>
+      <Hsp_hit-to>1004376</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTCTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>3</Hsp_num>
+      <Hsp_bit-score>553.269</Hsp_bit-score>
+      <Hsp_score>299</Hsp_score>
+      <Hsp_evalue>2.03654e-153</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>307626</Hsp_hit-from>
+      <Hsp_hit-to>307947</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>322</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTT-GTTCTAGGG-A-TTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAACTTTGCGGTTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTTGTTCTAGGGGATTTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>|||| |||||| ||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| | |||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|1185654967|gb|KY619977.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 80022 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619977</Hit_accession>
+  <Hit_len>379</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>566.195</Hsp_bit-score>
+      <Hsp_score>306</Hsp_score>
+      <Hsp_evalue>2.61586e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>50</Hsp_hit-from>
+      <Hsp_hit-to>367</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|1152729561|gb|KY595983.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 4931-K3 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY595983</Hit_accession>
+  <Hit_len>360</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>566.195</Hsp_bit-score>
+      <Hsp_score>306</Hsp_score>
+      <Hsp_evalue>2.61586e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>356</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|1152729560|gb|KY595982.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 4345-KZ5 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY595982</Hit_accession>
+  <Hit_len>364</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>566.195</Hsp_bit-score>
+      <Hsp_score>306</Hsp_score>
+      <Hsp_evalue>2.61586e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>41</Hsp_hit-from>
+      <Hsp_hit-to>358</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>315</Hsp_identity>
+      <Hsp_positive>315</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>319</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCGA</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|1445930961|gb|MH734515.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate GBBC_Clso_03 16S-23S ribosomal RNA intergenic spacer and 23S ribosomal RNA gene, partial sequence</Hit_def>
+  <Hit_accession>MH734515</Hit_accession>
+  <Hit_len>960</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>564.348</Hsp_bit-score>
+      <Hsp_score>305</Hsp_score>
+      <Hsp_evalue>9.4083e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>320</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>347</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>314</Hsp_identity>
+      <Hsp_positive>314</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCG</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGCG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|1227014288|gb|MF421729.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate SWE 1 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421729</Hit_accession>
+  <Hit_len>353</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>564.348</Hsp_bit-score>
+      <Hsp_score>305</Hsp_score>
+      <Hsp_evalue>9.4083e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>319</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>353</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>314</Hsp_identity>
+      <Hsp_positive>314</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGC</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGC</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|1227014286|gb|MF421727.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate UK 4 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MF421727</Hit_accession>
+  <Hit_len>354</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>564.348</Hsp_bit-score>
+      <Hsp_score>305</Hsp_score>
+      <Hsp_evalue>9.4083e-157</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>319</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>354</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>314</Hsp_identity>
+      <Hsp_positive>314</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTATGC</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTATGC</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|1185654972|gb|KY619982.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 16:013083 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619982</Hit_accession>
+  <Hit_len>326</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>560.655</Hsp_bit-score>
+      <Hsp_score>303</Hsp_score>
+      <Hsp_evalue>1.21704e-155</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>12</Hsp_hit-from>
+      <Hsp_hit-to>326</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>312</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>GATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>GATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|1185654968|gb|KY619978.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 16:012932 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619978</Hit_accession>
+  <Hit_len>346</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>560.655</Hsp_bit-score>
+      <Hsp_score>303</Hsp_score>
+      <Hsp_evalue>1.21704e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>346</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>312</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|1185654966|gb|KY619976.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 20:009060 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619976</Hit_accession>
+  <Hit_len>346</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>560.655</Hsp_bit-score>
+      <Hsp_score>303</Hsp_score>
+      <Hsp_evalue>1.21704e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>346</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>312</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|1185654965|gb|KY619975.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 20:007038 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619975</Hit_accession>
+  <Hit_len>346</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>560.655</Hsp_bit-score>
+      <Hsp_score>303</Hsp_score>
+      <Hsp_evalue>1.21704e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>346</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>312</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTA-GGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTGAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGGATTTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTCATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|1512459647|gb|MG911709.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 6949 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MG911709</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|1512459646|gb|MG911708.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 5749 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MG911708</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|1445930951|gb|MH734516.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate GBBC_Clso_04 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>MH734516</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|1185654973|gb|KY619983.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 122249 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619983</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|1185654971|gb|KY619981.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 94018 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619981</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|1185654969|gb|KY619979.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 15213009 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY619979</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|1179412370|gb|KY486292.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 13:013239 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486292</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|1179412369|gb|KY486291.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 13:013238 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486291</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|1179412368|gb|KY486290.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 13:007885 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486290</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|1179412367|gb|KY486289.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 13:006756 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486289</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|1179412365|gb|KY486287.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 13:003977 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486287</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|1179412364|gb|KY486286.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 79074 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486286</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|1179412363|gb|KY486285.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 79052 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486285</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|1179412362|gb|KY486284.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 79040 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486284</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|1179412361|gb|KY486283.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 79004 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486283</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|1179412360|gb|KY486282.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 78032 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486282</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|1179412359|gb|KY486281.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 77065 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486281</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|1179412358|gb|KY486280.1|</Hit_id>
+  <Hit_def>Candidatus Liberibacter solanacearum isolate 73054 16S-23S ribosomal RNA intergenic spacer, partial sequence</Hit_def>
+  <Hit_accession>KY486280</Hit_accession>
+  <Hit_len>344</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>558.808</Hsp_bit-score>
+      <Hsp_score>302</Hsp_score>
+      <Hsp_evalue>4.37726e-155</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>317</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>344</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>311</Hsp_identity>
+      <Hsp_positive>311</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>315</Hsp_align-len>
+      <Hsp_qseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAATCAGGCAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGATTTTTTTTTAGAGCGATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_qseq>
+      <Hsp_hseq>ATAATTTTGCGATTGATGGGGTCATTTAAGTTTATGTTAAGGGCCCATAGCTCAGGCGGTTAGAGTGCACCCCTGATAAGGGTGAGGTCGGTAGTTCGAATCTACCTGGGCCCACCATTCAGTCAGGTAAGGGGCCGTAGCTCAGCTGGGAGAGCGCCTGCTTTGCAAGCAGGATGTCAGCGGTTCGATCCCGCTCGGCTCCACCAATTGCGAATTTATAGTTTTTTTGTTCTAGGGA-TTTTTTTTAGAGCAATAGTTTTTTGAAAATTGAATAGAAGGTAGATTTTTTTGTATTTTTTATATTGGCATTGTAT</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>56496701</Statistics_db-num>
+      <Statistics_db-len>539198458</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.46</Statistics_kappa>
+      <Statistics_lambda>1.28</Statistics_lambda>
+      <Statistics_entropy>0.85</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

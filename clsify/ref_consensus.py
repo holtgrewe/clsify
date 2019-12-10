@@ -24,9 +24,11 @@ from Bio.Blast import NCBIXML
 from Bio.Align import Applications
 from logzero import logger
 
+from .ref_download import REF_SEQS
 from .ref_blast import load_tsv
 from .cli import _proc_args
-from .paste import load_fasta, REF_FILE, do_paste
+from .common import load_fasta
+from .paste import REF_FILE, do_paste
 from .workflow import only_blast
 
 
@@ -35,7 +37,7 @@ def paste_query_seq(query_seq, blast_alignment):
     hsp = blast_alignment.hsps[0]
 
     if hsp.strand[0] == "Plus":  # query strand is forward
-        prefix = query_seq[: hsp.query_start - 1]
+        prefix = query_seq[: hsp.query_start]
         sbjct_seq = "".join([c for c in hsp.sbjct if c in "cgatnCGATN"])
         suffix = query_seq[hsp.query_end :]
         seq = prefix + sbjct_seq + suffix
@@ -101,7 +103,7 @@ def write_consensus(path, query_name, query_seq, alignments, args):
                 "-ALIGN",
                 "-OUTFILE=%s" % path_alignment,
                 "-OUTPUT=FASTA",
-                "-OUTORDER=ALIGNED",
+                "-OUTORDER=INPUT",
                 "-SEED=42",
             ]
             logger.info("- %s", " ".join(cmd))
@@ -196,7 +198,7 @@ def only_bases(s):
     return "".join([x for x in s if x.upper() in "CGATN"])
 
 
-def describe(*, ali_pos, ref, alt, **kwargs):
+def describe(*, pos, ref, alt, **kwargs):
     """Return description of variant."""
     if "-" in ref and "-" in alt:
         raise Exception("Cannot handle this yet!")
@@ -204,29 +206,32 @@ def describe(*, ali_pos, ref, alt, **kwargs):
         if "-" not in ref[1]:
             raise Exception("Cannot handle this yet!")
         else:
-            if len(ref) == 2:
-                return "n.%ddel%s" % (ali_pos, alt[1:])
-            else:
-                return "n.%d_%ddel%s" % (ali_pos, ali_pos + len(ref) - 2, alt[1:])
+            return "n.%d_%dins%s" % (pos, pos + 1, alt[1:])
     elif "-" in alt:
         if "-" not in alt[1]:
             raise Exception("Cannot handle this yet!")
         else:
-            return "n.%d_%dins%s" % (ali_pos, ali_pos + 1, ref[1:])
+            if len(ref) == 2:
+                return "n.%ddel%s" % (pos + 1, ref[1:])
+            else:
+                return "n.%d_%ddel%s" % (pos + 1, pos + len(ref) - 1, ref[1:])
     elif len(ref) == 1 and len(alt) == 1:
-        return "n.%d%s>%s" % (ali_pos, ref, alt)
+        return "n.%d%s>%s" % (pos, ref, alt)
     else:
-        return "n.%d_%ddel%sins%s" % (ali_pos - 1, ali_pos, ref, alt)
+        if len(ref) == 2:
+            return "n.%ddel%s" % (pos + 1, ref[1:])
+        else:
+            return "n.%d_%ddel%s" % (pos + 1, pos + len(ref) - 1, ref[1:])
 
 
-def call_variants(ref, alt):
+def call_variants(ref, alt, offset=0):
     if len(ref) != len(alt):
         raise Exception("Invalid alignment row lengths: %d vs. %d", len(ref), len(alt))
     result = {}
 
-    pos_ref = 0  # position in ref
+    pos_ref = offset  # position in ref
     i = 0  # position in rows
-    curr_var = None
+    curr_var = {}
     while i < len(ref):
         if ref[i] == alt[i]:
             if curr_var:
@@ -235,8 +240,8 @@ def call_variants(ref, alt):
                         curr_var = {
                             "pos": curr_var["pos"] - 1,
                             "ali_pos": curr_var["ali_pos"] - 1,
-                            "ref": ref[curr_var["pos"] - 2] + curr_var["ref"],
-                            "alt": alt[curr_var["pos"] - 2] + curr_var["alt"],
+                            "ref": ref[curr_var["ali_pos"] - 2] + curr_var["ref"],
+                            "alt": alt[curr_var["ali_pos"] - 2] + curr_var["alt"],
                         }
                     else:  # use base right of it, VCF-style
                         curr_var = {
@@ -247,9 +252,11 @@ def call_variants(ref, alt):
                             "alt": curr_var["alt"]
                             + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
                         }
+                curr_var["ref_bases"] = curr_var["ref"]
+                curr_var["alt_bases"] = curr_var["alt"]
                 curr_var["description"] = describe(**curr_var)
                 result[curr_var["pos"]] = curr_var
-                curr_var = None
+                curr_var = {}
         else:
             if curr_var:
                 curr_var["ref"] = curr_var["ref"] + ref[i]
@@ -277,6 +284,8 @@ def call_variants(ref, alt):
                     "ref": curr_var["ref"] + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
                     "alt": curr_var["alt"] + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
                 }
+        curr_var["ref_bases"] = curr_var["ref"]
+        curr_var["alt_bases"] = curr_var["alt"]
         curr_var["description"] = describe(**curr_var)
         result[curr_var["pos"]] = describe(**curr_var)
 
@@ -339,7 +348,7 @@ def build_haplotyping_table(records, args):
                     "-ALIGN",
                     "-OUTFILE=%s" % path_alignment,
                     "-OUTPUT=FASTA",
-                    "-OUTORDER=ALIGNED",
+                    "-OUTORDER=INPUT",
                     "-SEED=42",
                 ]
                 logger.info("- %s", " ".join(cmd))
@@ -354,7 +363,7 @@ def build_haplotyping_table(records, args):
 
         logger.info("Generating variant table for each haplotype")
         variants = {
-            key: call_variants(alignment[region], alignment[key])
+            key: call_variants(alignment[region], alignment[key], REF_SEQS[region]["start"])
             for key in sorted(alignment.keys())
             if key != region
         }
@@ -362,24 +371,26 @@ def build_haplotyping_table(records, args):
         for calls in variants.values():
             for vals in calls.values():
                 pos = vals["pos"]
+                ref = only_bases(vals["ref_bases"])
+                alt = only_bases(vals["alt_bases"])
                 desc = vals["description"]
-                xs.add((pos, desc))
+                xs.add((pos, ref, alt, desc))
 
         table = {}
         haplotypes = [h.split("_")[1] for h in variants.keys()]
 
-        header = ["row", "pos", "description"] + haplotypes
+        header = ["row", "pos", "ref_bases", "alt_bases", "description"] + haplotypes
         lines = []
-        for row, (pos, desc) in enumerate(sorted(xs), 1):
+        for row, (pos, ref, alt, desc) in enumerate(sorted(xs), 1):
             ref_seq, region = seq_name.split("_", 1)
             record = {"reference": ref_seq, "region": region, "position": pos}
-            line = [row, pos, desc]
+            line = [row, pos, ref, alt, desc]
 
             # Find reference allele bases.
             ref = "N"
             for name in variants.keys():
                 if pos in variants[name] and variants[name][pos]["description"] == desc:
-                    ref = variants[name][pos]["ref"]
+                    ref = only_bases(variants[name][pos]["ref"])
                     break
 
             for name in variants.keys():
@@ -389,7 +400,7 @@ def build_haplotyping_table(records, args):
                 else:
                     record[name.split("_", 1)[1]] = only_bases(ref)
                     line.append("-")
-            table[(pos, desc)] = record
+            table[(pos, ref, alt, desc)] = record
             lines.append(line)
 
         result[(ref_name, ref_region)] = dict(sorted(table.items()))
@@ -403,16 +414,27 @@ def build_haplotyping_table(records, args):
             print("\t".join(map(str, line)))
 
     if args.output_table:
-        separator = "# --------\t------\t------\t--------------" + "\t------" * len(haplotypes)
+        logger.info("Writing haplotyping table to %s", args.output_table)
+        separator = (
+            "# --------\t-------\t------\t------\t------\t---------------"
+            + "\t------" * len(haplotypes)
+        )
         with open(args.output_table, "wt") as haplof:
             print(separator, file=haplof)
-            print("\t".join(["reference", "region", "pos", "description"] + haplotypes), file=haplof)
+            print(
+                "\t".join(["reference", "region", "pos", "ref", "alt", "description"] + haplotypes),
+                file=haplof,
+            )
             print(separator, file=haplof)
             for (ref_name, ref_region), records in result.items():
-                for (pos, desc), record in records.items():
-                    line = [ref_name, ref_region, pos, desc] + [record[h] for h in haplotypes]
+                for (pos, ref, alt, desc), record in records.items():
+                    line = [ref_name, ref_region, pos, ref, alt, desc] + [
+                        record[h] for h in haplotypes
+                    ]
                     print("\t".join(map(str, line)), file=haplof)
                 print(separator, file=haplof)
+    else:
+        logger.info("Writing no haplotype table (use --output-table to specify the path")
 
 
 def run(parser, args):

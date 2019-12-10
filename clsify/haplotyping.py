@@ -31,6 +31,11 @@ def load_haplotyping_table(path: str) -> typing.Dict[typing.Tuple[str, int], Hap
     """Load haplotyping table from the given ``path``."""
     # logger.debug("Loading haplotyping table from %s", path)
     result = {}
+
+    if not os.path.exists(path):
+        logger.warning("Could not load haplotyping table from %s", path)
+        return result
+
     header = None
     with open(path, "rt") as inputf:
         for line in inputf:
@@ -65,10 +70,14 @@ class HaplotypingResult:
 
     #: The file name used for haplotyping
     filename: str
+    #: The query name
+    query: str
     #: mapping from ``(reference, zero_based_pos)`` to allele value
     informative_values: typing.Dict[typing.Tuple[str, int], str]
 
-    def merge(self, other):
+    def merge(
+        self, other: typing.TypeVar("HaplotypingResult")
+    ) -> typing.TypeVar("HaplotypingResult"):
         keys = list(
             sorted(set(self.informative_values.keys()) | set(other.informative_values.keys()))
         )
@@ -80,9 +89,9 @@ class HaplotypingResult:
                 if here == there:
                     merged[key] = here
             merged[key] = self.informative_values.get(key, other.informative_values.get(key))
-        return HaplotypingResult(filename="-", informative_values=merged)  # post-merging
+        return HaplotypingResult(filename="-", query="-", informative_values=merged)  # post-merging
 
-    def asdict(self, only_summary=False):
+    def asdict(self, only_summary=False) -> typing.Dict:
         informative = {}
         scores = {}
         for name in HAPLOTYPE_NAMES:
@@ -111,7 +120,7 @@ class HaplotypingResult:
                 },
             }
 
-    def compare(self, haplotype):
+    def compare(self, haplotype: str) -> typing.Tuple[int, int]:
         """Return ``(match_count, mismatch_count)`` for the given ``haplotype``."""
         positive = 0
         negative = 0
@@ -123,18 +132,36 @@ class HaplotypingResult:
         return (positive, negative)
 
     @classmethod
-    def fromdict(self, dict_):
+    def fromdict(self, dict_: typing.Dict) -> typing.TypeVar("HaplotypingResult"):
         informative_values = {}
         for key, value in dict_.items():
             if ":" in key and value is not None:
                 arr = key.split(":", 1)
                 informative_values[(arr[0], int(arr[1]) - 1)] = value
-        return HaplotypingResult(filename=dict_["filename"], informative_values=informative_values)
+        return HaplotypingResult(
+            filename=dict_["filename"], query=dict_["query"], informative_values=informative_values
+        )
 
 
-def run_haplotyping(matches: typing.List[BlastMatch]) -> typing.List[HaplotypingResult]:
+@attr.s(auto_attribs=True, frozen=True)
+class HaplotypingResultWithMatches:
+    """Result from haplotyping."""
+
+    #: The actual ``HaplotypingResult``.
+    result: typing.Optional[HaplotypingResult]
+    #: The ``BlastMatch``es that the haplotyping is based on.
+    matches: typing.Optional[typing.Tuple[BlastMatch]]
+
+    @staticmethod
+    def build_empty() -> typing.TypeVar("HaplotypingResultWithMatches"):
+        return HaplotypingResultWithMatches(None, None)
+
+
+def run_haplotyping(
+    matches: typing.Iterable[BlastMatch]
+) -> typing.Dict[str, HaplotypingResultWithMatches]:
     """Perform the haplotyping based on the match."""
-    results_match = {}
+    results_matches = {}
     results_haplo = {}
 
     for match in matches:
@@ -143,20 +170,33 @@ def run_haplotyping(matches: typing.List[BlastMatch]) -> typing.List[Haplotyping
             ref = ref.split("_")[0]
         pos = match.database_start
         informative_values = {}
-        for h, q in zip(match.alignment.hseq, match.alignment.qseq):
-            if h in "ACGTacgt":
+        for _i, (h, q) in enumerate(zip(match.alignment.hseq, match.alignment.qseq)):
+            if h in "ACGTNacgtn":
                 if (ref, pos) in HAPLOTYPE_TABLE:
-                    informative_values[(ref, pos)] = q.upper()
+                    # Only handle SNVs for now.
+                    # TODO: handle indels correctly
+                    if (
+                        len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["ref"]) == 1
+                        and len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["alt"]) == 1
+                    ):
+                        informative_values[(ref, pos)] = q.upper()
                 pos += 1
             else:
                 assert h == "-", "Invalid hseq character '%s'" % h
 
-        result = HaplotypingResult(filename=match.query, informative_values=informative_values)
+        result = HaplotypingResult(
+            filename=match.path, query=match.query, informative_values=informative_values
+        )
         if result.filename in results_haplo:
-            results_match[result.filename].append(match)
+            results_matches[result.filename].append(match)
             results_haplo[result.filename] = results_haplo[result.filename].merge(result)
         else:
-            results_match[result.filename] = [match]
+            results_matches[result.filename] = [match]
             results_haplo[result.filename] = result
 
-    return results_match, results_haplo
+    return {
+        filename: HaplotypingResultWithMatches(
+            result=results_haplo[filename], matches=results_matches[filename]
+        )
+        for filename in results_matches
+    }

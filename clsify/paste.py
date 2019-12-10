@@ -6,29 +6,10 @@ import textwrap
 
 from logzero import logger
 
-from .blast import revcomp
+from .common import load_fasta, revcomp
 from .conversion import convert_seqs
 from .workflow import blast_and_haplotype_many, REF_FILE
 from .cli import _proc_args
-
-
-def load_fasta(path):
-    result = {}
-    with open(path, "rt") as inputf:
-        name = None
-        seq_lines = []
-        for line in inputf:
-            line = line.rstrip()
-            if line.startswith(">"):
-                if name:
-                    result[name] = "".join(seq_lines)
-                name = line[1:].split()[0]
-                seq_lines = []
-            elif name:  # ignore if first line is not ">"
-                seq_lines.append(line)
-        if name:
-            result[name] = "".join(seq_lines)
-    return result
 
 
 def do_paste(match, ref_seqs=None):

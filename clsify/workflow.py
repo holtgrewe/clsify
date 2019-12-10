@@ -9,13 +9,16 @@ from this with a regexp.
 
 import os
 import re
+import typing
 
 import attr
 from logzero import logger
 import pandas as pd
+import tempfile
 
-from .blast import run_blast
-from .haplotyping import run_haplotyping
+from .blast import run_blast, BlastMatch
+from .common import load_fasta
+from .haplotyping import run_haplotyping, HaplotypingResultWithMatches
 
 #: Default minimal quality to consider a match as true.
 DEFAULT_MIN_IDENTITY = 0.5
@@ -38,45 +41,41 @@ class NamedSequence:
     sequence: str
 
 
-def only_blast(path_query):
+def only_blast(path_query: str) -> typing.Tuple[BlastMatch]:
     """Run BLAST and haplotyping for the one file at ``path_query``."""
     logger.info("Running BLAST on all references for %s...", path_query)
-    with open(path_query, "rt") as inputf:
-        line_name = None
-        lines_seq = []
-        for line in inputf:
-            line = line.rstrip()
-            if not line:
-                continue
-            if line.startswith(">"):
-                if line_name is not None:
-                    break
-                else:
-                    line_name = line
-            elif line_name is not None:
-                lines_seq.append(line)
     return run_blast(REF_FILE, path_query)
 
 
-def blast_and_haplotype(path_query):
-    matches = blast_and_haplotype
-    return matches, run_haplotyping(path_query)
+def blast_and_haplotype(path_query: str) -> typing.Dict[str, HaplotypingResultWithMatches]:
+    return run_haplotyping(only_blast(path_query))
 
 
-def blast_and_haplotype_many(paths_query):
+def blast_and_haplotype_many(
+    paths_query: typing.Iterable[str]
+) -> typing.Dict[str, HaplotypingResultWithMatches]:
     """Run BLAST and haplotyping for all files at ``paths_query``.
 
     Return list of dicts with keys "best_match" and "haplo_result".
     """
     logger.info("Running BLAST and haplotyping for all queries...")
-    result = []
-    for path_query in sorted(paths_query):
-        matches, haplo_result = blast_and_haplotype(path_query)
-        result.append({"matches": matches, "haplo_result": haplo_result})
+    result = {}
+    for path_query in paths_query:
+        path_result = blast_and_haplotype(path_query)
+        if path_result:
+            result.update(path_result)
+        else:
+            result[path_query] = HaplotypingResultWithMatches.build_empty()
     return result
 
 
-def results_to_data_frames(results, regex, column="query"):
+def strip_ext(s: str) -> str:
+    return s.rsplit(".", 1)[0]
+
+
+def results_to_data_frames(
+    results: typing.Dict[str, HaplotypingResultWithMatches], regex: str, column: str = "query"
+) -> typing.Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Convert list of dicts with best_match/haplo_result to triple of Pandas DataFrame.
 
     The three DataFrame will contain the following information:
@@ -88,51 +87,63 @@ def results_to_data_frames(results, regex, column="query"):
     r_summary = []
     r_blast = []
     r_haplo = []
-    for result in results:
-        query = result["query"]
-        best_match = result["best_match"]
-        haplo_result = result["haplo_result"]
+    for path, result in results.items():
+        haplo_result = result.result
+        if not haplo_result:
+            for query, query_seq in load_fasta(path).items():
+                r_summary.append(
+                    {"query": query, "database": ".", "identity": 0, "orig_sequence": query_seq}
+                )
+                r_blast.append({"query": query})
+                r_haplo.append({"query": query})
+        else:
+            query_seq = load_fasta(path)[haplo_result.query]
+            haplo_matches = result.matches
+            best_match = list(sorted(haplo_matches, key=lambda m: m.identity, reverse=True))[0]
+            # import pdb; pdb.set_trace()
 
-        r_summary.append(
-            {
-                "query": best_match.query,
-                "database": best_match.database,
-                "identity": 100.0 * best_match.identity,
-                **{
-                    key: value
-                    for key, value in haplo_result.asdict().items()
-                    if key in ("best_haplotypes", "best_score")
-                },
-                "orig_sequence": query.sequence,
-            }
-        )
-        r_blast.append(
-            {
-                "query": best_match.query,
-                "database": best_match.database,
-                "identity": 100.0 * best_match.identity,
-                "q_start": best_match.query_start,
-                "q_end": best_match.query_end,
-                "q_str": best_match.query_strand,
-                "db_start": best_match.database_start,
-                "db_end": best_match.database_end,
-                "db_str": best_match.database_strand,
-                "alignment": best_match.alignment.wrapped(
-                    best_match.query_start, best_match.database_start
-                ),
-                "orig_sequence": query.sequence,
-            }
-        )
-        r_haplo.append(
-            {
-                "query": haplo_result.filename,
-                **{
-                    key: value
-                    for key, value in haplo_result.asdict().items()
-                    if "_pos" in key or "_neg" in key or key in ("best_haplotypes", "best_score")
-                },
-            }
-        )
+            r_summary.append(
+                {
+                    "query": best_match.query,
+                    "database": best_match.database,
+                    "identity": 100.0 * best_match.identity,
+                    **{
+                        key: value
+                        for key, value in haplo_result.asdict().items()
+                        if key in ("best_haplotypes", "best_score")
+                    },
+                    "orig_sequence": query_seq,
+                }
+            )
+            r_blast.append(
+                {
+                    "query": best_match.query,
+                    "database": best_match.database,
+                    "identity": 100.0 * best_match.identity,
+                    "q_start": best_match.query_start,
+                    "q_end": best_match.query_end,
+                    "q_str": best_match.query_strand,
+                    "db_start": best_match.database_start,
+                    "db_end": best_match.database_end,
+                    "db_str": best_match.database_strand,
+                    "alignment": best_match.alignment.wrapped(
+                        best_match.query_start, best_match.database_start
+                    ),
+                    "orig_sequence": query_seq,
+                }
+            )
+            r_haplo.append(
+                {
+                    "query": best_match.query,
+                    **{
+                        key: value
+                        for key, value in haplo_result.asdict().items()
+                        if "_pos" in key
+                        or "_neg" in key
+                        or key in ("best_haplotypes", "best_score")
+                    },
+                }
+            )
 
     dfs = pd.DataFrame(r_summary), pd.DataFrame(r_blast), pd.DataFrame(r_haplo)
     dfs = list(map(lambda df: match_sample_in_data_frame(df, regex, column), dfs))
@@ -140,22 +151,37 @@ def results_to_data_frames(results, regex, column="query"):
     for df in dfs:
         df.index = range(df.shape[0])
         df.insert(0, "id", df.index)
-    return dfs
+    return tuple(dfs)
 
 
-def augment_summary(df, results, regex, column, group_by):
+def augment_summary(
+    df: pd.DataFrame,
+    results: typing.Dict[str, HaplotypingResultWithMatches],
+    regex: str,
+    column: str,
+    group_by: str,
+):
     grouped = {}
-    for pair in results:
-        haplo_result = pair["haplo_result"]
-        m = re.match(regex, haplo_result.filename)
+    for record in results.values():
+        if not record.result:
+            continue
+        m = re.match(regex, record.result.query)
         if m and m.group(group_by):
             if m.group(group_by) not in grouped:
-                grouped[m.group(group_by)] = haplo_result
+                grouped[m.group(group_by)] = record.result
             else:
-                grouped[m.group(group_by)] = grouped[m.group(group_by)].merge(haplo_result)
+                grouped[m.group(group_by)] = grouped[m.group(group_by)].merge(record.result)
     rows = []
     for key, value in grouped.items():
-        rows.append({group_by: key, **value.asdict(only_summary=True)})
+        rows.append(
+            {
+                "query": "%s_ZZZ *** SUMMARY ***" % key,
+                group_by: key,
+                **value.asdict(only_summary=True),
+            }
+        )
+    for key in set(df[group_by].values) - grouped.keys():  # fill for those without matches
+        rows.append({"query": "%s_ZZZ *** SUMMARY ***" % key, group_by: key})
     orig_columns = list(df.columns.values)
     return df.append(pd.DataFrame(rows))[orig_columns].sort_values(["sample", "query"]).fillna("-")
 
@@ -196,21 +222,3 @@ def match_sample_in_data_frame(df, regex, column):
         df.insert(idx + i + 1, key, column)
 
     return df
-
-
-if __name__ == "__main__":
-    results = blast_and_haplotype_many(
-        [
-            "examples/CA_SanJoaquinValley_Tm3_16S_LsoF.fasta",
-            "examples/CA_SanJoaquinValley_Tm3_50S_CL514F.fasta",
-            "examples/CA_SanJoaquinValley_Tm4_16S_LsoF.fasta",
-            "examples/CA_SanJoaquinValley_Tm4_50S_CL514F.fasta",
-        ]
-    )
-    df_summary, df_blast, df_haplotyping = results_to_data_frames(results, DEFAULT_PARSE_RE)
-    print(df_summary)
-    print(df_blast)
-    print(df_haplotyping)
-    from .export import write_excel
-
-    write_excel(df_summary, df_blast, df_haplotyping, "foo.xlsx")
