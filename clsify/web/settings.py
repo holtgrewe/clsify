@@ -12,6 +12,9 @@ SAMPLE_REGEX = r"(?P<sample>[^_]+_[^_]+_[^_]+)_(?P<region>[^_]+)_(?P<primer>.*)"
 #: Default read name pattern.
 # SAMPLE_REGEX = r".*(?P<sample>([^\.]+))\.(?P<region>([^\.]+)\.(?P<primer>([^\.]+))"
 
+#: Whether to write file name as sample name.
+FILE_NAME_TO_SAMPLE_NAME = True
+
 #: Known regions.
 KNOWN_REGIONS = ("16S", "16S-23S", "50S")
 #: Known primers.

@@ -12,9 +12,10 @@ import dash_html_components as html
 from logzero import logger
 import pandas as pd
 
+from ..conversion import convert_seqs
 from ..export import write_excel
 from ..workflow import blast_and_haplotype_many, results_to_data_frames
-from .settings import SAMPLE_REGEX
+from .settings import FILE_NAME_TO_SAMPLE_NAME, SAMPLE_REGEX
 
 from . import ui
 
@@ -35,6 +36,7 @@ def register_upload(app):
                         logger.info("Writing to %s", paths_reads[-1])
                         _, content = content.split(",", 1)
                         tmp_file.write(base64.b64decode(content))
+                seq_files = convert_seqs(paths_reads, tmpdir, FILE_NAME_TO_SAMPLE_NAME)
                 results = blast_and_haplotype_many(paths_reads)
                 df_summary, df_blast, df_haplotyping = results_to_data_frames(results, SAMPLE_REGEX)
             return json.dumps(
@@ -73,10 +75,10 @@ def register_computation_complete(app):
                                 html.I(className="fas fa-file-excel ml-2 mr-2"),
                                 "Download XLSX",
                             ],
-                            href="data:text/html,<script>alert('hi');</script>",
+                            # href="data:text/html,<script>alert('hi');</script>",
                             download="clsify_result.xlsx",
                             target="_blank",
-                            # href="data:%s;base64,%s" % (mime, xlsx),
+                            href="data:%s;base64,%s" % (mime, xlsx),
                         )
                     ]
                 ),
