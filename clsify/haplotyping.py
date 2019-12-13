@@ -10,9 +10,11 @@ import tempfile
 import typing
 
 import attr
+import json
 from logzero import logger
 
 from .blast import BlastMatch
+from .common import call_variants, normalize_var
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -170,19 +172,11 @@ def run_haplotyping(
             ref = ref.split("_")[0]
         pos = match.database_start
         informative_values = {}
-        for _i, (h, q) in enumerate(zip(match.alignment.hseq, match.alignment.qseq)):
-            if h in "ACGTNacgtn":
-                if (ref, pos) in HAPLOTYPE_TABLE:
-                    # Only handle SNVs for now.
-                    # TODO: handle indels correctly
-                    if (
-                        len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["ref"]) == 1
-                        and len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["alt"]) == 1
-                    ):
-                        informative_values[(ref, pos)] = q.upper()
-                pos += 1
-            else:
-                assert h == "-", "Invalid hseq character '%s'" % h
+        calls = call_variants(match.alignment.hseq, match.alignment.qseq, match.database_start)
+        for call in calls.values():
+            pos = call["pos"] - 1
+            if (ref, pos) in HAPLOTYPE_TABLE:
+                informative_values[(ref, pos)] = call["alt_bases"]
 
         result = HaplotypingResult(
             filename=match.path, query=match.query, informative_values=informative_values

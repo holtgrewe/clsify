@@ -2,6 +2,13 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Properly normalizing indels according to Tan et al. (2015).
+- Adding support for haplotyping with indels.
+
 ------
 v0.2.0
 ------

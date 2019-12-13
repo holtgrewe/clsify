@@ -12,6 +12,8 @@ The following actions are performed for this step:
 3. Perform MSA of the type reference sequences and generate a haplotyping table from this.
 """
 
+# TODO: replace dict representing variant by attrs-based class.
+
 import itertools
 import os
 import shlex
@@ -27,7 +29,7 @@ from logzero import logger
 from .ref_download import REF_SEQS
 from .ref_blast import load_tsv
 from .cli import _proc_args
-from .common import load_fasta
+from .common import call_variants, describe, load_fasta, normalize_var, only_bases
 from .paste import REF_FILE, do_paste
 from .workflow import only_blast
 
@@ -170,7 +172,6 @@ def build_haplotype_sequences(records, args):
         logger.info("Handling %s", record["path"])
         basename = os.path.basename(record["path"])[: -len(".fasta")]
         matches = only_blast(os.path.join(base_dir, basename + ".consensus.fasta"))
-        # matches[record["region"]][record["haplotype"]] = seed_matches
         for match in matches:
             if match.database is None:
                 logger.info("  => no match for %s", match.query)
@@ -192,104 +193,6 @@ def build_haplotype_sequences(records, args):
 
 def strip_n(s):
     return "".join([c for c in s if c not in "nN"])
-
-
-def only_bases(s):
-    return "".join([x for x in s if x.upper() in "CGATN"])
-
-
-def describe(*, pos, ref, alt, **kwargs):
-    """Return description of variant."""
-    if "-" in ref and "-" in alt:
-        raise Exception("Cannot handle this yet!")
-    elif "-" in ref:
-        if "-" not in ref[1]:
-            raise Exception("Cannot handle this yet!")
-        else:
-            return "n.%d_%dins%s" % (pos, pos + 1, alt[1:])
-    elif "-" in alt:
-        if "-" not in alt[1]:
-            raise Exception("Cannot handle this yet!")
-        else:
-            if len(ref) == 2:
-                return "n.%ddel%s" % (pos + 1, ref[1:])
-            else:
-                return "n.%d_%ddel%s" % (pos + 1, pos + len(ref) - 1, ref[1:])
-    elif len(ref) == 1 and len(alt) == 1:
-        return "n.%d%s>%s" % (pos, ref, alt)
-    else:
-        if len(ref) == 2:
-            return "n.%ddel%s" % (pos + 1, ref[1:])
-        else:
-            return "n.%d_%ddel%s" % (pos + 1, pos + len(ref) - 1, ref[1:])
-
-
-def call_variants(ref, alt, offset=0):
-    if len(ref) != len(alt):
-        raise Exception("Invalid alignment row lengths: %d vs. %d", len(ref), len(alt))
-    result = {}
-
-    pos_ref = offset  # position in ref
-    i = 0  # position in rows
-    curr_var = {}
-    while i < len(ref):
-        if ref[i] == alt[i]:
-            if curr_var:
-                if curr_var["ref"].startswith("-") or curr_var["alt"].startswith("-"):
-                    if curr_var["ali_pos"] > 1:  # left-pad indels if possible
-                        curr_var = {
-                            "pos": curr_var["pos"] - 1,
-                            "ali_pos": curr_var["ali_pos"] - 1,
-                            "ref": ref[curr_var["ali_pos"] - 2] + curr_var["ref"],
-                            "alt": alt[curr_var["ali_pos"] - 2] + curr_var["alt"],
-                        }
-                    else:  # use base right of it, VCF-style
-                        curr_var = {
-                            "pos": curr_var["pos"],
-                            "ali_pos": curr_var["ali_pos"] - 1,
-                            "ref": curr_var["ref"]
-                            + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
-                            "alt": curr_var["alt"]
-                            + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
-                        }
-                curr_var["ref_bases"] = curr_var["ref"]
-                curr_var["alt_bases"] = curr_var["alt"]
-                curr_var["description"] = describe(**curr_var)
-                result[curr_var["pos"]] = curr_var
-                curr_var = {}
-        else:
-            if curr_var:
-                curr_var["ref"] = curr_var["ref"] + ref[i]
-                curr_var["alt"] = curr_var["alt"] + alt[i]
-            else:
-                curr_var = {"pos": pos_ref + 1, "ali_pos": i + 1, "ref": ref[i], "alt": alt[i]}
-
-        if ref[i] != "-":
-            pos_ref += 1
-        i += 1
-
-    if curr_var:
-        if curr_var["ref"].startswith("-") or curr_var["alt"].startswith("-"):
-            if curr_var["ali_pos"] > 1:  # left-pad indels if possible
-                curr_var = {
-                    "pos": curr_var["pos"] - 1,
-                    "ali_pos": curr_var["ali_pos"] - 1,
-                    "ref": ref[curr_var["ali_pos"] - 2] + curr_var["ref"],
-                    "alt": alt[curr_var["ali_pos"] - 2] + curr_var["alt"],
-                }
-            else:  # use base right of it, VCF-style
-                curr_var = {
-                    "pos": curr_var["ali_pos"],
-                    "ali_pos": curr_var["ali_pos"] - 1,
-                    "ref": curr_var["ref"] + ref[curr_var["ali_pos"] + len(curr_var["ref"])],
-                    "alt": curr_var["alt"] + alt[curr_var["ali_pos"] + len(curr_var["alt"])],
-                }
-        curr_var["ref_bases"] = curr_var["ref"]
-        curr_var["alt_bases"] = curr_var["alt"]
-        curr_var["description"] = describe(**curr_var)
-        result[curr_var["pos"]] = describe(**curr_var)
-
-    return result
 
 
 def build_haplotyping_table(records, args):
@@ -404,12 +307,11 @@ def build_haplotyping_table(records, args):
             lines.append(line)
 
         result[(ref_name, ref_region)] = dict(sorted(table.items()))
-        # import pdb; pdb.set_trace()
 
         print("Haplotyping Table")
         print("-----------------")
         print()
-        print("\t".join(map(str, header)))
+        print("\t".join(map(str, header)).replace("_bases", "").upper() + "\n")
         for line in lines:
             print("\t".join(map(str, line)))
 
