@@ -154,6 +154,9 @@ def results_to_data_frames(
     return tuple(dfs)
 
 
+SUMMARY_SUFFIX = "_ZZZ *** SUMMARY ***"
+
+
 def augment_summary(
     df: pd.DataFrame,
     results: typing.Dict[str, HaplotypingResultWithMatches],
@@ -175,15 +178,17 @@ def augment_summary(
     for key, value in grouped.items():
         rows.append(
             {
-                "query": "%s_ZZZ *** SUMMARY ***" % key,
+                "query": "%s%s" % (key, SUMMARY_SUFFIX),
                 group_by: key,
                 **value.asdict(only_summary=True),
             }
         )
     for key in set(df[group_by].values) - grouped.keys():  # fill for those without matches
-        rows.append({"query": "%s_ZZZ *** SUMMARY ***" % key, group_by: key})
+        rows.append({"query": "%s%s" % (key, SUMMARY_SUFFIX), group_by: key})
     orig_columns = list(df.columns.values)
-    return df.append(pd.DataFrame(rows))[orig_columns].sort_values(["sample", "query"]).fillna("-")
+    df = df.append(pd.DataFrame(rows))[orig_columns].sort_values(["sample", "query"]).fillna("-")
+    df["query"] = df["query"].str.replace(re.escape(SUMMARY_SUFFIX), "")
+    return df
 
 
 def match_sample_in_data_frame(df, regex, column):

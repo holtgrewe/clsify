@@ -10,9 +10,11 @@ import tempfile
 import typing
 
 import attr
+import json
 from logzero import logger
 
 from .blast import BlastMatch
+from .common import call_variants, normalize_var
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -164,25 +166,21 @@ def run_haplotyping(
     results_matches = {}
     results_haplo = {}
 
+    # TODO: properly handle overlapping changes; directly look into alignment
     for match in matches:
         ref = match.database
         if "_" in ref:
             ref = ref.split("_")[0]
-        pos = match.database_start
+
+        calls = call_variants(match.alignment.hseq, match.alignment.qseq, match.database_start)
+
         informative_values = {}
-        for _i, (h, q) in enumerate(zip(match.alignment.hseq, match.alignment.qseq)):
-            if h in "ACGTNacgtn":
-                if (ref, pos) in HAPLOTYPE_TABLE:
-                    # Only handle SNVs for now.
-                    # TODO: handle indels correctly
-                    if (
-                        len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["ref"]) == 1
-                        and len(HAPLOTYPE_TABLE[(ref, pos)].haplo_values["alt"]) == 1
-                    ):
-                        informative_values[(ref, pos)] = q.upper()
-                pos += 1
-            else:
-                assert h == "-", "Invalid hseq character '%s'" % h
+        for (h_ref, h_pos), variant in HAPLOTYPE_TABLE.items():
+            if ref == h_ref and h_pos >= match.database_start and h_pos < match.database_end:
+                if h_pos + 1 in calls:
+                    informative_values[(ref, h_pos)] = variant.haplo_values["alt"]
+                else:
+                    informative_values[(ref, h_pos)] = variant.haplo_values["ref"]
 
         result = HaplotypingResult(
             filename=match.path, query=match.query, informative_values=informative_values

@@ -68,8 +68,12 @@ def write_excel(df_summary, df_blast, df_haplotyping, path):
     }
 
     # Apply conditional formatting.
+    c_summary = chr(ord("A") + df_summary.columns.get_loc("identity"))
+    c_blast = chr(ord("A") + df_blast.columns.get_loc("identity"))
     for cond in cond_green, cond_yellow, cond_red:
-        sheet_summary.conditional_format("E2:E%d" % (df_summary.shape[0] + 1), cond)
-        sheet_blast.conditional_format("E2:E%d" % (df_blast.shape[0] + 1), cond)
+        sheet_summary.conditional_format(
+            "%s2:%s%d" % (c_summary, c_summary, df_summary.shape[0] + 1), cond
+        )
+        sheet_blast.conditional_format("%s2:%s%d" % (c_blast, c_blast, df_blast.shape[0] + 1), cond)
 
     writer.save()

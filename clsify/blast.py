@@ -39,7 +39,7 @@ class Alignment:
             result += [
                 ("Sbjct %%4d %%-%ds %%s" % line_length)
                 % (db_start + offset + 1, self.hseq[offset:end], db_start + offset + line_length),
-                ("      %%4s %%-%ds" % line_length) % ("", self.midline[offset:end]),
+                ("      %%4s %%-%ds" % line_length) % ("", "".join(self.midline[offset:end])),
                 ("Query %%4d %%-%ds %%s" % line_length)
                 % (qry_start + offset + 1, self.qseq[offset:end], qry_start + offset + line_length),
                 "",
