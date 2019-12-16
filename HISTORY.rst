@@ -2,10 +2,11 @@
 History
 =======
 
------------------
-HEAD (unreleased)
------------------
+------
+v0.3.0
+------
 
+- Adding tutorial.
 - Rebranding as "Haplotype-LSO" (``hlso``).
 - Properly normalizing indels according to Tan et al. (2015).
 - Adding support for haplotyping with indels.
