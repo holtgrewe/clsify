@@ -1,8 +1,8 @@
-======
-CLSify
-======
+=============
+Haplotype-LSO
+=============
 
-Classification of *Candidatus Liberibacter solanacearum* following IPPC (International Plant Protection Convention) standard `DP 21: Candidatus Liberibacter solanacearum <https://www.ippc.int/en/publications/84157>`_.
+Haplotype assignment of *Candidatus Liberibacter solanacearum* following IPPC (International Plant Protection Convention) standard `DP 21: Candidatus Liberibacter solanacearum <https://www.ippc.int/en/publications/84157>`_.
 
 -----------
 Quick Facts
@@ -40,7 +40,7 @@ Then:
 
 .. code-block:: bash
 
-    # conda install -y clsify
+    # conda install -y hlso
 
 And -- tadaa -- you're ready to go!
 
@@ -52,8 +52,8 @@ If you have a single sequence per FASTA (or FASTQ) file then you can use the fil
 
 .. code-block:: bash
 
-    # clsify -o result.tsv INPUT.fasta
+    # hlso -o result.tsv INPUT.fasta
     ## OR
-    # clsify [--use-file-name] -o result.tsv INPUT1.fasta INPUT2.fasta [...]
+    # hlso [--use-file-name] -o result.tsv INPUT1.fasta INPUT2.fasta [...]
     ## e.g.,
-    # clsify [--use-file-name] -o result.tsv INPUT*.fasta
+    # hlso [--use-file-name] -o result.tsv INPUT*.fasta

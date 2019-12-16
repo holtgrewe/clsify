@@ -76,7 +76,7 @@ def register_computation_complete(app):
                                 "Download XLSX",
                             ],
                             # href="data:text/html,<script>alert('hi');</script>",
-                            download="clsify_result.xlsx",
+                            download="hlso_result.xlsx",
                             target="_blank",
                             href="data:%s;base64,%s" % (mime, xlsx),
                         )

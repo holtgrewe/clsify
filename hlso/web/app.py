@@ -1,4 +1,4 @@
-"""Setup of Clsify Dash application."""
+"""Setup of Haplotype-Lso Dash application."""
 
 import os
 
@@ -7,7 +7,7 @@ import flask
 
 from . import callbacks, settings
 from .ui import build_layout
-from clsify import __version__
+from hlso import __version__
 
 #: Path to assets.
 ASSETS_FOLDER = os.path.join(os.path.dirname(__file__), "assets")
@@ -31,7 +31,7 @@ app = dash.Dash(
 )
 
 # Set app title
-app.title = "clsify v%s" % __version__
+app.title = "hlso v%s" % __version__
 
 # Initialize UI
 app.layout = build_layout()

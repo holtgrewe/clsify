@@ -46,7 +46,7 @@ def write_pasted(results, output_prefix):
 
 
 def run(parser, args):
-    """Run the ``clsify`` command line interface."""
+    """Run the ``hlso`` command line interface."""
     args = _proc_args(parser, args)
     logger.info("Starting Lso classification.")
     logger.info("Arguments are %s", vars(args))
@@ -71,6 +71,6 @@ def add_parser(subparser):
         help="Keep masked reference sequence (mostly useful for debugging purposes).",
     )
     parser.add_argument(
-        "-o", "--output-prefix", default="clsify_paste_out.d/", help="Prefix for output files"
+        "-o", "--output-prefix", default="hlso_paste_out.d/", help="Prefix for output files"
     )
     parser.add_argument("seq_files", nargs="+", default=[], action="append")

@@ -1,4 +1,4 @@
-"""Code for the command line interface to ``clsify``."""
+"""Code for the command line interface to ``hlso``."""
 
 import tempfile
 import typing
@@ -40,7 +40,7 @@ class Config:
 
 
 def run(parser, args):
-    """Run the ``clsify`` command line interface."""
+    """Run the ``hlso`` command line interface."""
     args = _proc_args(parser, args)
     config = Config(
         input_paths=tuple(args.seq_files),

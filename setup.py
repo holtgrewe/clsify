@@ -34,22 +34,22 @@ requirements = parse_requirements("requirements.txt")
 test_requirements = parse_requirements("requirements/test.txt")
 
 setup(
-    name="clsify",
+    name="hlso",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     description="Classify C. Liberibacter solanacearum haplotypes",
     long_description=readme + "\n\n" + history,
     author="Manuel Holtgrewe",
     author_email="manuel.holtgrewe@bihealth.de",
-    entry_points={"console_scripts": ("clsify = clsify.__main__:main",)},
-    url="https://github.com/holtgrewe/clsify",
-    packages=["clsify"],
-    package_dir={"clsify": "clsify"},
+    entry_points={"console_scripts": ("hlso = hlso.__main__:main",)},
+    url="https://github.com/holtgrewe/hlso",
+    packages=["hlso"],
+    package_dir={"hlso": "hlso"},
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
     zip_safe=False,
-    keywords="clsify",
+    keywords="hlso",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",

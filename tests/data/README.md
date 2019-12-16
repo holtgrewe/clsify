@@ -10,7 +10,7 @@ The data accession numbers were obtained from the following sources:
 The table fit the information regarding the data can be found in `samples.tsv`.
 
 ```bash
-REF=../../clsify/data/ref_seqs.fasta 
+REF=../../hlso/data/ref_seqs.fasta 
 for f in Nelson2012/*.fa; do
   blastn -db $REF -query $f -outfmt 15 \
   | jq \

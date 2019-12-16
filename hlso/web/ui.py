@@ -77,7 +77,7 @@ def render_page_content_empty_children():
                         ".scf, or .ab1 files.  You can find a ZIP file with some examples ",
                         html.A(
                             children=[html.I(className="fas fa-download mr-1"), "here"],
-                            href="/dash/assets/clsify_example.zip",
+                            href="/dash/assets/hlso_example.zip",
                             className="badge badge-primary",
                         ),
                         ".",
@@ -119,7 +119,7 @@ def render_footer():
                     children=[
                         html.Div(
                             children=[
-                                html.Span("clsify v%s" % __version__, className="text-muted")
+                                html.Span("haplotype-lso v%s" % __version__, className="text-muted")
                             ],
                             className="col-6",
                         ),
@@ -130,7 +130,7 @@ def render_footer():
                                         html.I(className="fab fa-github mr-1"),
                                         "GitHub Project",
                                     ],
-                                    href="https://github.com/holtgrewe/clsify",
+                                    href="https://github.com/holtgrewe/haplotype-lso",
                                     className="text-muted",
                                 )
                             ],

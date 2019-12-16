@@ -1,9 +1,9 @@
-"""Clsify web front-end settings."""
+"""Haplotype-Lso web front-end settings."""
 
 # Not Configurable ===========================================================
 
 #: String to display on home screen.
-HOME_BRAND = "clsify"
+HOME_BRAND = "hlso"
 
 # TODO: should this come from the UI?
 #: The sample regex

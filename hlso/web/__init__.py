@@ -1,4 +1,4 @@
-"""Code for the web interface to ``clsify``."""
+"""Code for the web interface to Haplotype-Lso."""
 
 import os
 
@@ -8,7 +8,7 @@ from . import settings
 
 
 def run(parser, args):
-    """Run the ``clsify`` command line interface."""
+    """Run the ``hlso`` command line interface."""
     logger.info("Configuring settings from arguments %s", args)
     settings.HOST = args.host
     settings.PORT = args.port
@@ -29,14 +29,14 @@ def add_parser(subparser):
     parser.set_defaults(func=run)
 
     parser.add_argument(
-        "--host", help="Server host", default=os.environ.get("CLSIFY_HOST", "0.0.0.0")
+        "--host", help="Server host", default=os.environ.get("HLSO_HOST", "0.0.0.0")
     )
     parser.add_argument(
-        "--port", help="Server port", type=int, default=int(os.environ.get("CLSIFY_PORT", "8050"))
+        "--port", help="Server port", type=int, default=int(os.environ.get("HLSO_PORT", "8050"))
     )
     parser.add_argument(
         "--public-url-prefix",
-        default=os.environ.get("CLSIFY_URL_PREFIX", ""),
+        default=os.environ.get("HLSO_URL_PREFIX", ""),
         help="The prefix that this app will be served under (e.g., if behind a reverse proxy.)",
     )
     parser.add_argument(
