@@ -147,7 +147,7 @@ def results_to_data_frames(
 
     dfs = pd.DataFrame(r_summary), pd.DataFrame(r_blast), pd.DataFrame(r_haplo)
     dfs = list(map(lambda df: match_sample_in_data_frame(df, regex, column), dfs))
-    dfs[0] = augment_summary(dfs[0], results, regex, column, "sample")
+    dfs[0] = augment_summary(dfs[0], results, regex, column, "sample" if "sample" in dfs[0].columns else "query")
     for df in dfs:
         df.index = range(df.shape[0])
         df.insert(0, "id", df.index)
@@ -186,7 +186,11 @@ def augment_summary(
     for key in set(df[group_by].values) - grouped.keys():  # fill for those without matches
         rows.append({"query": "%s%s" % (key, SUMMARY_SUFFIX), group_by: key})
     orig_columns = list(df.columns.values)
-    df = df.append(pd.DataFrame(rows))[orig_columns].sort_values(["sample", "query"]).fillna("-")
+    if "samples" in df.columns:
+        keys = ["sample", "query"]
+    else:
+        keys = ["query"]
+    df = df.append(pd.DataFrame(rows))[orig_columns].sort_values(keys).fillna("-")
     df["query"] = df["query"].str.replace(re.escape(SUMMARY_SUFFIX), "")
     return df
 

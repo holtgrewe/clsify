@@ -36,11 +36,11 @@ Installation
 We recommend using `Bioconda <https://bioconda.github.io>`_.
 
 First `install Bioconda <https://bioconda.github.io/user/install.html#getting-started>`_.
-Then:
+Then (``clsify`` is the old package name of Haplotype-Lso and it will be renamed soon):
 
 .. code-block:: bash
 
-    # conda install -y hlso
+    # conda install -y clsify
 
 And -- tadaa -- you're ready to go!
 

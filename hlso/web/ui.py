@@ -1,5 +1,7 @@
 """Setup of Dash UI."""
 
+import os
+
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
@@ -22,6 +24,9 @@ from .. import __version__
 
 #: names of columns that are not to be shown
 HIDDEN_COLUMNS = ("alignment", "orig_sequence")
+#: Markdown to show on the start page
+with open(os.path.join(os.path.dirname(__file__), "static", "index.md"), "rt") as inputf:
+    INDEX_MD = inputf.read()
 
 
 def render_navbar():
@@ -82,7 +87,8 @@ def render_page_content_empty_children():
                         ),
                         ".",
                     ]
-                )
+                ),
+                dcc.Markdown(INDEX_MD),
             ]
         ),
         html.Div(children=[dash_table.DataTable(id="blast-table")], style={"display": "none"}),

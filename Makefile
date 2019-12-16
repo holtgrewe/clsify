@@ -24,14 +24,14 @@ install:
 	pip install -e .
 
 serve:
-	clsify web --debug
+	hlso web --debug
 
 sdist:
 	rm -rf dist
 	python setup.py sdist
 
 twine-test: sdist
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/clsify-*.tar.gz
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/hlso-*.tar.gz
 
 twine-real: sdist
-	twine upload dist/clsify-*.tar.gz
+	twine upload dist/hlso-*.tar.gz
