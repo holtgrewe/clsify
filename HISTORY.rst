@@ -2,6 +2,12 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Starting out with tutorial.
+
 ------
 v0.3.0
 ------

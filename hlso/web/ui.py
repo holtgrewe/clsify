@@ -24,9 +24,6 @@ from .. import __version__
 
 #: names of columns that are not to be shown
 HIDDEN_COLUMNS = ("alignment", "orig_sequence")
-#: Markdown to show on the start page
-with open(os.path.join(os.path.dirname(__file__), "static", "index.md"), "rt") as inputf:
-    INDEX_MD = inputf.read()
 
 
 def render_navbar():
@@ -68,7 +65,7 @@ def render_page_content_empty_children():
     return [
         html.Div(
             children=[
-                html.Div(
+                html.P(
                     children=[
                         "Click ",
                         html.Span(
@@ -88,7 +85,25 @@ def render_page_content_empty_children():
                         ".",
                     ]
                 ),
-                dcc.Markdown(INDEX_MD),
+                html.P(
+                    children=[
+                        "You can find the Haplotype-Lso ",
+                        html.A(
+                            children=[html.I(className="fa fa-book"), " manual here"],
+                            href="https://haplotype-lso.readthedocs.io/en/latest",
+                        ),
+                        " which also contains the ",
+                        html.A(
+                            children=[html.I(className="fa fa-shoe-prints"), " Tutorial"],
+                            href="https://haplotype-lso.readthedocs.io/en/latest/overview_tutorial.html",
+                        ),
+                        ".",
+                    ]
+                ),
+                html.P(
+                    children=[html.I(className="fa fa-smile-wink"), " Happy haplotyping!"],
+                    className="text-center",
+                ),
             ]
         ),
         html.Div(children=[dash_table.DataTable(id="blast-table")], style={"display": "none"}),

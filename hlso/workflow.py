@@ -147,7 +147,9 @@ def results_to_data_frames(
 
     dfs = pd.DataFrame(r_summary), pd.DataFrame(r_blast), pd.DataFrame(r_haplo)
     dfs = list(map(lambda df: match_sample_in_data_frame(df, regex, column), dfs))
-    dfs[0] = augment_summary(dfs[0], results, regex, column, "sample" if "sample" in dfs[0].columns else "query")
+    dfs[0] = augment_summary(
+        dfs[0], results, regex, column, "sample" if "sample" in dfs[0].columns else "query"
+    )
     for df in dfs:
         df.index = range(df.shape[0])
         df.insert(0, "id", df.index)

@@ -24,3 +24,7 @@ dash-core-components
 dash-bootstrap-components
 dash_table
 plotly
+
+# Documentation using Sphinx.
+Sphinx
+sphinx-rtd-theme
