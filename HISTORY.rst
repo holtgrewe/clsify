@@ -2,6 +2,13 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Changing file name pattern do dot-separated scheme.
+- Greatly extending documentation.
+
 ------
 v0.3.1
 ------

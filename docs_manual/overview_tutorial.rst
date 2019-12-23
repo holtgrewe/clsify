@@ -25,6 +25,22 @@ Then select all files (e.g., by pressing :guilabel:`Ctrl + a` at the same time) 
 
 Wait for a moment and the haplotyping results will be displayed.
 
+.. note::
+
+    When looking at the example data, you will notice that the file names all follow the same pattern:
+
+    .. code-block::
+
+        example_A.16S.fasta
+        ^-- the sample name
+                  ^-- the region name
+
+    The first element of the file name is the sample name, the second element is the name of the target region, separated by a dot.
+    The tool will use this information to group your sequences later and (a) group type information by sample and (b) compute consensus by sample and region.
+    Item (a) allows to determine the haplotype based on multipe regions per sample and (b) allows to use sequence from both forward and reverse primers.
+
+    Optionally, you can also add more information (e.g., primer-related) in a third group: ``<sample>.<region>.<primer>.fasta``.
+
 ------------------
 Result Summary Tab
 ------------------

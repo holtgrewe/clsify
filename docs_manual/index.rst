@@ -60,6 +60,18 @@ It is licensed under the permissive MIT license and you can find the source code
    :titlesonly:
 
    overview_tutorial
+   overview_haplotyping
+   overview_reference
+   overview_cli
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Meta
+   :name: meta
+   :hidden:
+   :titlesonly:
+
+   meta_references
 
 
 Indices and tables
