@@ -2,9 +2,15 @@
 History
 =======
 
------------------
-HEAD (unreleased)
------------------
+------
+v0.3.3
+------
+
+- Fixing regular expression.
+
+------
+v0.3.2
+------
 
 - Changing file name pattern do dot-separated scheme.
 - Greatly extending documentation.
