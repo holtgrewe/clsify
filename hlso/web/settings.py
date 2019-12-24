@@ -7,7 +7,7 @@ HOME_BRAND = "Haplotype-LSO"
 
 # TODO: should this come from the UI?
 #: The sample regex
-SAMPLE_REGEX = r"^(?P<sample>[^\.]+)\.(?P<region>[^\.]+)(?:\.(?P<primer>.*+))"
+SAMPLE_REGEX = r"^(?P<sample>[^\.]+)\.(?P<region>[^\.]+)(?:\.(?P<primer>.*))?"
 
 #: Whether to write file name as sample name.
 FILE_NAME_TO_SAMPLE_NAME = True
