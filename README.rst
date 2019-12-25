@@ -57,3 +57,21 @@ If you have a single sequence per FASTA (or FASTQ) file then you can use the fil
     # hlso [--use-file-name] -o result.tsv INPUT1.fasta INPUT2.fasta [...]
     ## e.g.,
     # hlso [--use-file-name] -o result.tsv INPUT*.fasta
+
+---------------
+Developer Guide
+---------------
+
+Releasing Packages
+==================
+
+For the `PyPi package <https://pypi.org/project/hlso/>`_:
+
+.. code-block:: shell
+
+    $ python setup.py sdist
+    $ twine upload --repository-url https://test.pypi.org/legacy/ dist/hlso-*.tar.gz
+    $ twine upload dist/hlso-*.tar.gz
+
+For the Bioconda package, see `the great documentation <http://bioconda.github.io/updating.html>`_.
+The Docker image will automatically be created as a BioContainer when the Bioconda package is built.

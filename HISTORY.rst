@@ -3,6 +3,12 @@ History
 =======
 
 ------
+v0.3.4
+------
+
+- Support for uploading to PyPi.
+
+------
 v0.3.3
 ------
 
