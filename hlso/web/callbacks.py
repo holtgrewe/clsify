@@ -15,6 +15,7 @@ import pandas as pd
 from ..conversion import convert_seqs
 from ..export import write_excel
 from ..workflow import blast_and_haplotype_many, results_to_data_frames
+from ..phylo import phylo_analysis
 from .settings import FILE_NAME_TO_SAMPLE_NAME, SAMPLE_REGEX
 
 from . import ui
@@ -39,18 +40,30 @@ def register_upload(app):
                 seq_files = convert_seqs(paths_reads, tmpdir, FILE_NAME_TO_SAMPLE_NAME)
                 results = blast_and_haplotype_many(paths_reads)
                 df_summary, df_blast, df_haplotyping = results_to_data_frames(results, SAMPLE_REGEX)
+
+                row_select = (df_summary.orig_sequence != "-") & (df_summary.region != "-")
+                columns = ["query", "region", "orig_sequence"]
+                phylo_result = phylo_analysis(df_summary[row_select][columns])
             return json.dumps(
                 {
                     "summary": df_summary.to_dict(),
                     "blast": df_blast.to_dict(),
                     "haplotyping": df_haplotyping.to_dict(),
+                    "phylo": phylo_result,
                 }
             )
 
 
 def load_hidden_data(hidden_data):
     raw_data = json.loads(hidden_data)
-    return {key: pd.DataFrame.from_dict(raw_data[key]) for key in raw_data}
+
+    def decode(data, key):
+        if key in ("summary", "blast", "haplotyping"):
+            return pd.DataFrame.from_dict(data)
+        else:
+            return data
+
+    return {key: decode(raw_data[key], key) for key in raw_data}
 
 
 def register_computation_complete(app):
@@ -91,6 +104,11 @@ def register_computation_complete(app):
                             label="Haplotyping",
                             id="tab-haplotyping",
                         ),
+                        dbc.Tab(
+                            ui.render_tab_dendrograms(data),
+                            label="Dendrograms",
+                            id="tab-dendgrograms",
+                        ),
                     ]
                 ),
             ]
@@ -102,7 +120,7 @@ def register_row_clicks(app):
         [Input("hidden-data", "children"), Input("blast-table", "selected_row_ids")],
     )
     def update_haplotype_match(hidden_data, selected_row_ids):
-        logger.info("Selected %s from %s", selected_row_ids, hidden_data)
+        # logger.info("Selected %s from %s", selected_row_ids, hidden_data)
         if selected_row_ids and hidden_data:
             selected_row_ids = list(map(str, selected_row_ids))[0]
             data = load_hidden_data(hidden_data)

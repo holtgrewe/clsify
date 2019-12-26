@@ -1,5 +1,7 @@
 """Setup of Dash UI."""
 
+import base64
+import io
 import os
 
 import dash_bootstrap_components as dbc
@@ -7,6 +9,8 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 from logzero import logger
+import numpy as np
+import plotly.figure_factory as ff
 
 from . import settings
 from .settings import (
@@ -20,6 +24,7 @@ from .settings import (
     BG_COLOR_RED,
 )
 from ..haplotyping import HAPLOTYPE_NAMES
+from ..phylo import plot_phylo
 from .. import __version__
 
 #: names of columns that are not to be shown
@@ -111,6 +116,7 @@ def render_page_content_empty_children():
             children=[dash_table.DataTable(id="haplotyping-table")], style={"display": "none"}
         ),
         html.Div(children=["placeholder"], id="blast-current-match", style={"display": "none"}),
+        render_hidden(),
     ]
 
 
@@ -297,13 +303,36 @@ def render_tab_haplotyping(session_data):
         style_cell=style_cell,
         style_header=style_header,
     )
-    # blast_match = html.Div(id="blast-haplotyping-children", children=[])
-    # blast_match_div = html.Div(children=["0815"], id="haplotyping-current-match")
-    return [dcc.Loading(table)]  # , dcc.Loading(blast_match_div)]
+    return [table]
+
+
+def render_tab_dendrograms(session_data):
+    logger.info("Rendering Dendrogram Tab")
+    result = []
+
+    for region, entry in session_data["phylo"].items():
+        result.append(html.H3("%s Region" % region))
+        if "message" in entry:
+            result.append(html.P(entry["message"]))
+        else:
+            labels = entry["labels"]
+            linkage = np.asarray(entry["linkage"])
+            buf = io.BytesIO()
+            plot_phylo(linkage, labels, region, buf, format="png", dpi=300)
+            result.append(
+                html.Img(
+                    src="data:image/png;base64,%s"
+                    % base64.b64encode(buf.getvalue()).decode("utf-8"),
+                    width=640,
+                    height=480,
+                )
+            )
+
+    return result
 
 
 def render_hidden():
-    return html.Div(children=[html.Div(id="hidden-data", style={"display": "none"})])
+    return html.Div(id="hidden-data", style={"display": "none"})
 
 
 def build_layout():
@@ -316,7 +345,6 @@ def build_layout():
             render_navbar(),
             render_main_content(),
             render_footer(),
-            render_hidden(),
         ],
         id="_dash-app-content",  # make pytest-dash happy
     )

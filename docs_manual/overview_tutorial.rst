@@ -127,3 +127,16 @@ best_score
 
 A+, A-, etc.
     for each haplotype known to Haplotype-LSO, the number of positive/concordant and negative/discordant position
+
+---------------------
+Phylogenetic Analysis
+---------------------
+
+The **Dendrograms** tab shows results of `hierarchical clustering <https://en.wikipedia.org/wiki/Hierarchical_clustering>`_ using the `UPGMA <https://en.wikipedia.org/wiki/UPGMA>`_ algorithm for each region.
+The input of the UPGMA algorithm is based on the pairwise BLAST identities (``1.0 - identity``).
+
+.. figure:: figures/result-dendrograms.png
+    :width: 80%
+    :align: center
+
+    The dendrograms tab with the phylogenetics analysis.

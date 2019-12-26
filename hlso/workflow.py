@@ -100,7 +100,6 @@ def results_to_data_frames(
             query_seq = load_fasta(path)[haplo_result.query]
             haplo_matches = result.matches
             best_match = list(sorted(haplo_matches, key=lambda m: m.identity, reverse=True))[0]
-            # import pdb; pdb.set_trace()
 
             r_summary.append(
                 {
