@@ -23,6 +23,11 @@ def revcomp(seq):
     return "".join(reversed(list(map(lambda x: m.get(x, x), seq))))
 
 
+def write_fasta(seqs, file):
+    for name, seq in seqs.items():
+        print(">%s\n%s" % (name, seq), file=file)
+
+
 def load_fasta(path):
     result = {}
     with open(path, "rt") as inputf:

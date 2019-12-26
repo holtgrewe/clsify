@@ -8,11 +8,9 @@ from logzero import logger
 
 from .conversion import convert_seqs
 from .export import write_excel
+from .phylo import phylo_analysis
 from .workflow import blast_and_haplotype_many, results_to_data_frames
 
-# from .analysis import convert_seqs, infer_from_file, write_ref
-# from .blast import run_blastn
-# from .haplo import HAPLOTYPE_NAMES, HaplotypeMatchScore, run_haplotyping, PlusMinus
 from .web.settings import SAMPLE_REGEX
 
 
@@ -61,6 +59,13 @@ def run(parser, args):
         logger.info("Summary:\n%s", df_summary)
         logger.info("Writing XLSX file to %s", args.output)
         write_excel(df_summary, df_blast, df_haplotyping, args.output)
+        if "region" in df_summary.columns:
+            row_select = (df_summary.orig_sequence != "-") & (df_summary.region != "-")
+            columns = ["query", "region", "orig_sequence"]
+            dendro_out = args.output[: -len(".xlsx")] + ".%s.png"
+            phylo_analysis(df_summary[row_select][columns], path_out=dendro_out)
+        else:
+            logger.info("Column 'region' not in summary, not computing similarities")
     logger.info("All done. Have a nice day!")
 
 

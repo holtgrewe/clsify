@@ -28,3 +28,11 @@ plotly
 # Documentation using Sphinx.
 Sphinx
 sphinx-rtd-theme
+
+# Numpy/Scipy/Pandas
+
+pandas
+scipy
+numpy
+
+biopython >=1.75

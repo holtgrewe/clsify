@@ -63,6 +63,8 @@ class BlastMatch:
     database: str
     #: identity fraction
     identity: float
+    #: bit score
+    bits: float
     #: strand of query ("+" or "-")
     query_strand: str
     #: 0-based start position
@@ -83,6 +85,14 @@ class BlastMatch:
     alignment: typing.Optional[Alignment]
 
     @property
+    def database_length(self):
+        return self.database_end - self.database_start
+
+    @property
+    def query_length(self):
+        return self.query_end - self.query_start
+
+    @property
     def is_match(self) -> bool:
         return bool(self.database)
 
@@ -93,6 +103,7 @@ class BlastMatch:
             query=query,
             database=None,
             identity=0.0,
+            bits=0.0,
             query_strand=".",
             query_start=0,
             query_end=0,
@@ -170,6 +181,7 @@ def parse_blastn_xml(
                     path=path_query,
                     query=blast_record.query,
                     database=blast_alignment.title.split()[1],
+                    bits=hsp.bits,
                     identity=hsp.identities / hsp.align_length,
                     query_strand=query_strand,
                     query_start=query_start,
@@ -190,3 +202,10 @@ def run_blast(database: str, query: str) -> typing.Tuple[BlastMatch]:
     cmd = ("blastn", "-db", database, "-query", query, "-outfmt", "16")
     logger.info("Executing %s", repr(" ".join(cmd)))
     return parse_blastn_xml(subprocess.check_output(cmd).decode("utf-8"), path_query=query)
+
+
+def run_makeblastdb(path: str, dbtype: str = "nucl") -> str:
+    """Run blastn on FASTA query ``query`` to database sequence at ``database``."""
+    cmd = ("makeblastdb", "-in", path, "-dbtype", "nucl")
+    logger.info("Executing %s", repr(" ".join(cmd)))
+    return subprocess.check_output(cmd).decode("utf-8")

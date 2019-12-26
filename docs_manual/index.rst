@@ -34,7 +34,7 @@ The easiest way is to install it via Docker:
 
     # for example:
 
-    $ docker run quay.io/biocontainers/haplotype-lso:0.3.0--0
+    $ docker run quay.io/biocontainers/haplotype-lso:0.3.2--0
 
 See `here <https://quay.io/repository/biocontainers/haplotype-lso?tab=tags>`_ for a list of all versions.
 

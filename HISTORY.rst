@@ -2,6 +2,12 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- compute region-wise phylogenetic tree (CLI)
+
 ------
 v0.3.4
 ------

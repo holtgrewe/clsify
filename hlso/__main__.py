@@ -10,7 +10,7 @@ import sys
 from . import cli, web, paste, convert, ref_download, ref_blast, ref_consensus
 
 #: The required executables in PATH.
-REQUIRED_EXECTUABLES = ("blastn",)
+REQUIRED_EXECTUABLES = ("blastn", "makeblastdb")
 
 
 def main(argv=None):
