@@ -2,9 +2,9 @@
 History
 =======
 
------------------
-HEAD (unreleased)
------------------
+------
+v0.4.1
+------
 
 - Fixing bug with display of BLAST match.
 - Adding link-out to NCBI WWWBLAST submission.
