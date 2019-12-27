@@ -9,6 +9,7 @@ HEAD (unreleased)
 - Fixing bug with display of BLAST match.
 - Adding link-out to NCBI WWWBLAST submission.
 - Removing some cruft from repository.
+- Fixing bug in phylogenetic coputation in case of BLAST all-to-all matches not a square number.
 
 ------
 v0.4.0

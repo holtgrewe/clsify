@@ -42,11 +42,15 @@ def phylo_analysis(
 
             logger.info("Running all-to-all BLAST")
             run_makeblastdb(path_seqs)
-            results = run_blast(path_seqs, path_seqs)
+            results = {(m.database, m.query): m.identity for m in run_blast(path_seqs, path_seqs)}
 
             logger.info("Performing clustering and dendrogram...")
-            identities = sorted((m.database, m.query, m.identity) for m in results)
-            difference = list(map(lambda x: 100.0 * (1.0 - x[2]), identities))
+            triples = sorted(
+                (k1, k2, 100.0 * (1.0 - results.get((min(k1, k2), max(k1, k2)), 0.0)))
+                for k1 in keys
+                for k2 in keys
+            )
+            difference = [t[-1] for t in triples]
             dist_sq = np.asarray(difference, dtype=np.float64).reshape(len(keys), len(keys))
             dist_cd = distance.squareform(dist_sq)
             clustering = hierarchy.average(dist_cd)
