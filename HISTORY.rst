@@ -6,6 +6,7 @@ History
 HEAD (unreleased)
 -----------------
 
+- Fixing bug with display of BLAST match.
 - Adding link-out to NCBI WWWBLAST submission.
 
 ------

@@ -116,7 +116,6 @@ def render_page_content_empty_children():
             children=[dash_table.DataTable(id="haplotyping-table")], style={"display": "none"}
         ),
         html.Div(children=["placeholder"], id="blast-current-match", style={"display": "none"}),
-        render_hidden(),
     ]
 
 
@@ -345,6 +344,7 @@ def build_layout():
             render_navbar(),
             render_main_content(),
             render_footer(),
+            render_hidden(),
         ],
         id="_dash-app-content",  # make pytest-dash happy
     )
