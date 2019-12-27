@@ -3,7 +3,7 @@
 # Not Configurable ===========================================================
 
 #: String to display on home screen.
-HOME_BRAND = "Haplotype-LSO"
+HOME_BRAND = "Haplotype-Lso"
 
 # TODO: should this come from the UI?
 #: The sample regex

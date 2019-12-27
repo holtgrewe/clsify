@@ -2,6 +2,12 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Adding link-out to NCBI WWWBLAST submission.
+
 ------
 v0.4.0
 ------

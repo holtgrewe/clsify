@@ -279,7 +279,7 @@ def render_tab_blast(session_data):
         style_header=style_header,
         row_selectable="single",
     )
-    blast_match_div = html.Div(children=["42"], id="blast-current-match")
+    blast_match_div = html.Div(id="blast-current-match")
     return [dcc.Loading(table), dcc.Loading(blast_match_div)]
 
 

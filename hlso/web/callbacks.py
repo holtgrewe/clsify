@@ -126,5 +126,29 @@ def register_row_clicks(app):
             data = load_hidden_data(hidden_data)
             df_blast = data["blast"]
             alignment = df_blast.loc[selected_row_ids].alignment
-            return [dcc.Markdown("```text\n%s\n```" % alignment, className="mt-3")]
+            ncbi_tpl = "%s?DATABASE=nt&PROGRAM=blastn&MEGABLAST=on&QUERY=>%s%%0A%s"
+            ncbi_url = ncbi_tpl % (
+                "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+                df_blast.loc[selected_row_ids]["query"],
+                df_blast.loc[selected_row_ids].orig_sequence,
+            )
+            return [
+                html.P(
+                    children=[
+                        html.Div(
+                            children=[
+                                html.A(
+                                    children=[
+                                        html.I(className="fas fa-external-link-alt"),
+                                        " RunNCBI BLAST for this sequence",
+                                    ],
+                                    href=ncbi_url,
+                                )
+                            ],
+                            className="mt-3",
+                        )
+                    ]
+                ),
+                dcc.Markdown("```text\n%s\n```" % alignment, className="mt-3"),
+            ]
         return [html.P(["no match selected yet"])]
