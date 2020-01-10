@@ -52,7 +52,7 @@ def blast_and_haplotype(path_query: str) -> typing.Dict[str, HaplotypingResultWi
 
 
 def blast_and_haplotype_many(
-    paths_query: typing.Iterable[str]
+    paths_query: typing.Iterable[str],
 ) -> typing.Dict[str, HaplotypingResultWithMatches]:
     """Run BLAST and haplotyping for all files at ``paths_query``.
 

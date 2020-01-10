@@ -83,6 +83,7 @@ class HaplotypingResult:
         keys = list(
             sorted(set(self.informative_values.keys()) | set(other.informative_values.keys()))
         )
+        queries = set()
         merged = {}
         for key in keys:
             if key in self.informative_values and key in other.informative_values:
@@ -91,7 +92,12 @@ class HaplotypingResult:
                 if here == there:
                     merged[key] = here
             merged[key] = self.informative_values.get(key, other.informative_values.get(key))
-        return HaplotypingResult(filename="-", query="-", informative_values=merged)  # post-merging
+        if self.filename == other.filename and self.query == other.query:
+            return HaplotypingResult(
+                filename=self.filename, query=self.query, informative_values=merged
+            )
+        else:
+            return HaplotypingResult(filename="-", query="-", informative_values=merged)
 
     def asdict(self, only_summary=False) -> typing.Dict:
         informative = {}
@@ -160,7 +166,7 @@ class HaplotypingResultWithMatches:
 
 
 def run_haplotyping(
-    matches: typing.Iterable[BlastMatch]
+    matches: typing.Iterable[BlastMatch],
 ) -> typing.Dict[str, HaplotypingResultWithMatches]:
     """Perform the haplotyping based on the match."""
     results_matches = {}

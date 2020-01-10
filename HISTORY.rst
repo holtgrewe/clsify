@@ -2,6 +2,12 @@
 History
 =======
 
+-----------------
+HEAD (unreleased)
+-----------------
+
+- Fix for multi-region sequences.
+
 ------
 v0.4.1
 ------
