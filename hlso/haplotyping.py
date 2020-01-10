@@ -48,7 +48,7 @@ def load_haplotyping_table(path: str) -> typing.Dict[typing.Tuple[str, int], Hap
                 header = arr
             else:
                 record = dict(zip(header, arr))
-                key = (record["reference"], int(record["pos"]) - 1)
+                key = (record["reference"], int(record["pos"]) - 1, record["ref"])
                 result[key] = HaplotypingPos(
                     reference=key[0], position=key[1], haplo_values=dict(zip(header[2:], arr[2:]))
                 )
@@ -75,7 +75,7 @@ class HaplotypingResult:
     #: The query name
     query: str
     #: mapping from ``(reference, zero_based_pos)`` to allele value
-    informative_values: typing.Dict[typing.Tuple[str, int], str]
+    informative_values: typing.Dict[typing.Tuple[str, int, str], str]
 
     def merge(
         self, other: typing.TypeVar("HaplotypingResult")
@@ -123,7 +123,7 @@ class HaplotypingResult:
                 "best_score": best_score,
                 **informative,
                 **{
-                    "%s:%d" % (key[0], key[1] + 1): self.informative_values.get(key)
+                    "%s:%d:%s" % (key[0], key[1] + 1, key[2]): self.informative_values.get(key)
                     for key in HAPLOTYPE_TABLE
                 },
             }
@@ -144,8 +144,8 @@ class HaplotypingResult:
         informative_values = {}
         for key, value in dict_.items():
             if ":" in key and value is not None:
-                arr = key.split(":", 1)
-                informative_values[(arr[0], int(arr[1]) - 1)] = value
+                arr = key.split(":", 2)
+                informative_values[(arr[0], int(arr[1]) - 1, arr[2])] = value
         return HaplotypingResult(
             filename=dict_["filename"], query=dict_["query"], informative_values=informative_values
         )
@@ -181,12 +181,12 @@ def run_haplotyping(
         calls = call_variants(match.alignment.hseq, match.alignment.qseq, match.database_start)
 
         informative_values = {}
-        for (h_ref, h_pos), variant in HAPLOTYPE_TABLE.items():
+        for (h_ref, h_pos, ref_base), variant in HAPLOTYPE_TABLE.items():
             if ref == h_ref and h_pos >= match.database_start and h_pos < match.database_end:
                 if h_pos + 1 in calls:
-                    informative_values[(ref, h_pos)] = variant.haplo_values["alt"]
+                    informative_values[(ref, h_pos, ref_base)] = variant.haplo_values["alt"]
                 else:
-                    informative_values[(ref, h_pos)] = variant.haplo_values["ref"]
+                    informative_values[(ref, h_pos, ref_base)] = variant.haplo_values["ref"]
 
         result = HaplotypingResult(
             filename=match.path, query=match.query, informative_values=informative_values

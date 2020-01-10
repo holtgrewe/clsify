@@ -7,6 +7,7 @@ HEAD (unreleased)
 -----------------
 
 - Fix for multi-region sequences.
+- Fixing collision, variant must be identified by sequence, position, and reference.
 
 ------
 v0.4.1

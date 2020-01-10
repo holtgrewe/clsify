@@ -3,6 +3,7 @@ docs_manual/_build
 out*
 /*.fasta
 *.xlsx
+/*.png
 
 # Editor cruft
 ~$*
