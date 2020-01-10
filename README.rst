@@ -1,8 +1,15 @@
+.. image:: https://readthedocs.org/projects/haplotype-lso/badge/?version=latest
+    :target: https://haplotype-lso.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 =============
 Haplotype-LSO
 =============
 
 Haplotype assignment of *Candidatus Liberibacter solanacearum* following IPPC (International Plant Protection Convention) standard `DP 21: Candidatus Liberibacter solanacearum <https://www.ippc.int/en/publications/84157>`_.
+
+- `Official Web App <https://haplotype-lso.bihealth.org>`_
+- `Tutorial <https://haplotype-lso.readthedocs.io/en/latest/?badge=latest>`_
 
 -----------
 Quick Facts
