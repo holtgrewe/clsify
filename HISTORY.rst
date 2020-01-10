@@ -2,9 +2,9 @@
 History
 =======
 
------------------
-HEAD (unreleased)
------------------
+------
+v0.4.2
+------
 
 - Fix for multi-region sequences.
 - Fixing collision, variant must be identified by sequence, position, and reference.
