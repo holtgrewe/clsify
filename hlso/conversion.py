@@ -19,26 +19,27 @@ def convert_seqs(
     logger.info("Running file conversion...")
     result = []
 
-    for seq_file in seq_files:
-        file_basename = os.path.basename(seq_file)[: -len(".fasta")]
+    for seq_path in seq_files:
+        file_basename = os.path.basename(seq_path)[: -len(".fasta")]
         path_fasta = os.path.join(tmpdir, file_basename) + ".fasta"
         result.append(path_fasta)
 
-        path_fasta_tmp = tempfile.NamedTemporaryFile(dir=tmpdir, delete=False)
-        if seq_file.endswith(".scf"):
-            logger.info("Converting SCF file %s...", seq_file)
-            SCF2FASTA(seq_file, path_fasta_tmp)()
-            result.append(path_fasta_tmp)
-        elif seq_file.endswith(".ab1"):
-            logger.info("Converting ABI file %s...", seq_file)
-            ABI2FASTA(seq_file, path_fasta_tmp)()
-            result.append(path_fasta_tmp)
-        elif seq_file.endswith(".fastq"):
-            logger.info("Converting FASTAQ file %s...", seq_file)
-            FASTQ2FASTA(seq_file, path_fasta_tmp)()
-            result.append(path_fasta_tmp)
-        else:
-            path_fasta_tmp = seq_file
+        path_fasta_tmp = tempfile.NamedTemporaryFile(dir=tmpdir, delete=False).name
+        with open(seq_path, "rb") as seq_file:
+            if seq_path.endswith(".scf"):
+                logger.info("Converting SCF file %s...", seq_path)
+                SCF2FASTA(seq_file, path_fasta_tmp)()
+                result.append(path_fasta_tmp)
+            elif seq_path.endswith(".ab1"):
+                logger.info("Converting ABI file %s...", seq_path)
+                ABI2FASTA(seq_file, path_fasta_tmp)()
+                result.append(path_fasta_tmp)
+            elif seq_path.endswith(".fastq"):
+                logger.info("Converting FASTAQ file %s...", seq_path)
+                FASTQ2FASTA(seq_file, path_fasta_tmp)()
+                result.append(path_fasta_tmp)
+            else:
+                path_fasta_tmp = seq_path
 
         fasta_content = load_fasta(path_fasta_tmp)
 

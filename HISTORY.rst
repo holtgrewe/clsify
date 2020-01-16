@@ -3,6 +3,12 @@ History
 =======
 
 ------
+v0.4.3
+------
+
+- Fixing issue with AB1/SCF support.
+
+------
 v0.4.2
 ------
 
