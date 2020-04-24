@@ -38,7 +38,7 @@ def register_upload(app):
                         _, content = content.split(",", 1)
                         tmp_file.write(base64.b64decode(content))
                 seq_files = convert_seqs(paths_reads, tmpdir, FILE_NAME_TO_SAMPLE_NAME)
-                results = blast_and_haplotype_many(paths_reads)
+                results = blast_and_haplotype_many(seq_files)
                 df_summary, df_blast, df_haplotyping = results_to_data_frames(results, SAMPLE_REGEX)
 
                 row_select = (df_summary.orig_sequence != "-") & (df_summary.region != "-")
